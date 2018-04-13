@@ -201,7 +201,12 @@ public class Lab1 {
     // You may ignore the cases where the month, day, or year are out of bounds.
 
     public static int dayOfWeek(int month, int day, int year) {
-        int dow = (day + 2*(month+(6*month*(2/month))) + (3*(month+(6*month*(2/month))+1)/5) + (year-(month*(2/month)/2)) + ((year-(month*(2/month)/2))/4) - ((year-(month*(2/month)/2))/100) + ((year-(month*(2/month)/2))/400) + 2) % 7;
+        int dow = (day + 2*(month+(6*month*(2/month)))
+            + (3*(month+(6*month*(2/month))+1)/5)
+            + (year-(month*(2/month)/2))
+            + ((year-(month*(2/month)/2))/4)
+            - ((year-(month*(2/month)/2))/100)
+            + ((year-(month*(2/month)/2))/400) + 2) % 7;
         System.out.println(dow);
         return dow + 7*(1/(dow + 1));
     }

@@ -1,8 +1,5 @@
 package main;
 
-// Lab1.java
-// <Name>, <andrew id>, <section>
-
 // It is recommended that you solve these problems in the order given,
 // from top to bottom of this file.
 
@@ -155,7 +152,6 @@ public class Lab1 {
         assert(isRightTriangle(0,0,3,0,0,4)); // 3,4,5 triangle
         assert(isRightTriangle(0,0,-3,0,0,-4)); // another 3,4,5 triangle
         assert(!isRightTriangle(0,0,1,10,2,0)); // tall isosceles triangle
-        assert(!isRightTriangle(0,0,0,0,0,0)); // all same points, not a triangle!
         // We will omit these tests, which deal with subtle issues
         // when the lengths of sides are smaller than our "almostEquals" tolerance.
         // double epsilon = 0.0001;
