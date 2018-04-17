@@ -96,7 +96,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application">
+    <configuration name="Lab2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.Lab2" />
       <module name="lab2" />
       <option name="VM_PARAMETERS" value="-ea" />
