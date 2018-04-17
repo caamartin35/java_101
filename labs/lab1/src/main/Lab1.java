@@ -17,7 +17,7 @@ public class Lab1 {
     // This method takes an integer and returns true if it is odd,
     // and false otherwise.
     public static boolean isOdd(int x) {
-        return true;
+        return x % 2 != 0;
     }
 
     public static void testIsOdd() {
@@ -36,7 +36,7 @@ public class Lab1 {
 
     // This method takes 3 integers and returns the value of the largest integer.
     public static int maxOf3(int x, int y, int z) {
-        return 42;
+        return Math.max(Math.max(x, y), z);
     }
 
     public static void testMaxOf3() {
@@ -58,8 +58,7 @@ public class Lab1 {
     // the three.  Note:  to solve this problem, you must call the
     // maxOf3 method you wrote above.
     public static int medianOf3(int x, int y, int z) {
-        int max = maxOf3(x, y, z); // how would you use this?  hmmmm....
-        return 42;
+        return maxOf3(Math.min(x, y), Math.min(x, z), Math.min(y, z));
     }
 
     public static void testMedianOf3() {
@@ -80,7 +79,7 @@ public class Lab1 {
     // This method takes one integer and returns the value of that number's
     // hundreds digit (or 0 if it does not have a hundreds digit).
     public static int hundredsDigit(int i) {
-        return 42;
+        return Math.abs((i / 100) % 10);
     }
 
     public static void testHundredsDigit() {
@@ -105,7 +104,7 @@ public class Lab1 {
     // the squares of the differences in x and y).
     // Hint:  You may wish to use both Math.pow and Math.sqrt here.
     public static double distance(double x0, double y0, double x1, double y1) {
-        return 42.0;
+        return Math.sqrt(Math.pow(x0-x1, 2) + Math.pow(y0-y1, 2));
     }
 
     public static void testDistance() {
@@ -123,6 +122,17 @@ public class Lab1 {
     /// 6.  isRightTriangle
     ////////////////////////////////////////////////////
 
+    public static double maxOf3Double(double x, double y, double z) {
+        return Math.max(Math.max(x, y), z);
+    }
+
+    public static double minOf3Double(double x, double y, double z) {
+        return Math.min(Math.min(x, y), z);
+    }
+
+    public static double medianOf3Double(double x, double y, double z) {
+        return maxOf3Double(Math.min(x, y), Math.min(x, z), Math.min(y, z));
+    }
     // This method takes six doubles describing three points (x0, y0), (x1, y1),
     // and (x2, y2), and returns true if the triangle connecting those points is
     // a right triangle and false otherwise.  How do you do that? First, find the
@@ -140,11 +150,11 @@ public class Lab1 {
         double s1 = distance(x0, y0, x1, y1);
         double s2 = distance(x0, y0, x2, y2);
         double s3 = distance(x1, y1, x2, y2);
-        // double c = maxOf3(s1, s2, s3);
-        // double a = minOf3(s1, s2, s3);
-        // double b = medianOf3(s1, s2, s3);
+        double c = maxOf3Double(s1, s2, s3);
+        double a = minOf3Double(s1, s2, s3);
+        double b = medianOf3Double(s1, s2, s3);
         // now, verify that a^2 + b^2 almost equals c^2.
-        return false;
+        return almostEqual(Math.pow(a, 2) + Math.pow(b, 2), Math.pow(c, 2));
     }
 
     public static void testIsRightTriangle() {
@@ -191,7 +201,8 @@ public class Lab1 {
     // You may ignore the cases where the month, day, or year are out of bounds.
 
     public static int dayOfWeek(int month, int day, int year) {
-        return 42; // replace this with your answer!
+        int dow = (day + 2*(month+(6*month*(2/month))) + (3*(month+(6*month*(2/month))+1)/5) + (year-(month*(2/month)/2)) + ((year-(month*(2/month)/2))/4) - ((year-(month*(2/month)/2))/100) + ((year-(month*(2/month)/2))/400) + 2) % 7;
+        return dow + 7*(1/(dow + 1));
     }
 
     public static void testDayOfWeek() {
