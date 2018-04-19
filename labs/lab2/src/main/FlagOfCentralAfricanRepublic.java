@@ -28,9 +28,23 @@ import javax.swing.*;
 
  */
 public class FlagOfCentralAfricanRepublic extends JComponent {
+    private static int MARGIN = 10;
 
     public void paint(Graphics page) {
-        // Place your paint code here!
+        int width = getWidth();
+        int height = getHeight();
+        page.setColor(new Color(0, 79, 152));
+        page.fillRect(MARGIN, MARGIN, width - 2 * MARGIN, (height - 2 * MARGIN) / 4);
+        page.setColor(Color.WHITE);
+        page.fillRect(MARGIN, MARGIN + (height - 2 * MARGIN) / 4, width - 2 * MARGIN, (height - 2 * MARGIN) / 4);
+        page.setColor(new Color(86, 130, 3));
+        page.fillRect(MARGIN, MARGIN + 2 * (height - 2 * MARGIN) / 4, width - 2 * MARGIN, (height - 2 * MARGIN) / 4);
+        page.setColor(new Color(255, 191, 0));
+        page.fillRect(MARGIN, MARGIN + 3 * (height - 2 * MARGIN) / 4, width - 2 * MARGIN, (height - 2 * MARGIN) / 4);
+        page.setColor(new Color(165, 42, 42));
+        page.fillRect(2 * ((width - 2 * MARGIN) / 5), MARGIN, ((width - 2 * MARGIN) / 5), height - 2 * MARGIN);
+        page.setColor(new Color(255, 191, 0));
+        page.fillOval(((width - 2 * MARGIN) / 10), MARGIN + (height - 2 * MARGIN) / 20, 3 * (height - 2 * MARGIN) / 20, 3 * (height - 2 * MARGIN) / 20);
     }
 
 
