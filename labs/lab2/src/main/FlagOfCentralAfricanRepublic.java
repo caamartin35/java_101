@@ -6,6 +6,7 @@ import javax.swing.*;
 /*
     In this class you will paint the flag of the central african republic which
     can be found here https://en.wikipedia.org/wiki/Flag_of_the_Central_African_Republic.
+    We are just doing rectangles and ovals, so instead of a star, an oval is fine.
     The flag must resize when you resize the window with a margin of 10 pixels on
     all sides. To learn how to pain things please refer to:
     https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics.html.
