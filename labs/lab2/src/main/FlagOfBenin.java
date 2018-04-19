@@ -27,9 +27,17 @@ import javax.swing.*;
 
  */
 public class FlagOfBenin extends JComponent {
+    private static int MARGIN = 10;
 
     public void paint(Graphics page) {
-        // Place your paint code here!
+        int width = getWidth();
+        int height = getHeight();
+        page.setColor(new Color(59, 122, 87));
+        page.fillRect(MARGIN, MARGIN, (width - 2 * MARGIN) / 3, height - 2 * MARGIN);
+        page.setColor(new Color(255, 191, 0));
+        page.fillRect((getWidth() - 2 * MARGIN) / 3 + MARGIN, MARGIN, 2 * (width - 2 * MARGIN) / 3, (height - 2 * MARGIN) / 2);
+        page.setColor(new Color(165, 42, 42));
+        page.fillRect((getWidth() - 2 * MARGIN) / 3 + MARGIN, MARGIN + (height - 2 * MARGIN) / 2, 2 * (width - 2 * MARGIN) / 3, (height - 2 * MARGIN) / 2);
     }
 
     //////////////////////////////////////////////
