@@ -159,35 +159,60 @@ class MysteryAnimation2 extends JComponentWithEvents {
             </li>
         </ol></li>
     <li><b><a name="Simple_Calculator">Simple Calculator</a><br>
-    </b>For this question, you are to write this simple calculator:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp; <a href="Hw3SimpleCalcDemo.jar">Hw3SimpleCalcDemo.jar</a>&nbsp;&nbsp;
-        (also available in <a href="Hw3SimpleCalcDemo.zip">Hw3SimpleCalcDemo.zip</a>)<br>
+    </b>For this question, you are to write a simple calculator:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; Simply right click on the demo (simpleCalcDemo.jar) in IntelliJ and click 'Run simpleCalcDemo.jar' to see it.&nbsp;&nbsp;
+        <br>
         To complete this question:<ol>
-            <li>Download and run the demo program (Hw3SimpleCalcDemo.jar), which shows
+            <li>Run the demo program (simpleCalcDemo.jar), which shows
                 how this program should work once it is completed.</li>
-            <li>Download <a href="Hw3SimpleCalc.java">Hw3SimpleCalc.java</a>.&nbsp; This
+            <li>Take a look at SimpleCalculator.java. This
                 file contains most of the solution already written for you, making your job
                 much easier.&nbsp; It also contains the specifics for the assignment, so you
                 really must start from this file.</li>
             <li>Read the comments at the head of the Hw3SimpleCalc.java file.&nbsp; Read
                 them <i>very carefully</i>!</li>
-            <li>Find each @TODO in the Hw3SimpleCalc.java file -- these explain each
+            <li>Find each @TODO in the SimpleCalculator.java file -- these explain each
                 step in the assignment.&nbsp; There are 16 steps, but most are fairly simple
                 (though a few might be a bit more challenging).<br>
                 <i>Hint:&nbsp; the program says it passes all tests now, but that's only
                     because the tests themselves are very incomplete!&nbsp; Part of your
-                    assignment is to write reasonable tests!</i></li>
-            <li>When completed, submit your completed Hw3SimpleCalc.java file.<br>
+                    assignment is to write reasonable tests!</i></li><br>
+        </ol>
+    </li>
+    <li><b><a name="Bonus/Optional:_Simple_Calculator_Extensions">
+        <span style="background-color: #FFFF00">Bonus/Optional</span>: Simple
+        Calculator Extensions</a><br>
+    </b>Here are two extensions you may add to the simple calculator for bonus.&nbsp;
+        If you plan to do these, first commit your regular calculator solution to git.
+        This way, if you screw this up beyond belief, you wont lose all the work you did before.<ol>
+            <li><b>Backspace<br>
+            </b>Add the ability for the user to enter a backspace, which undoes the last
+                letter typed.&nbsp; The user should be able to backspace multiple times,
+                back through the equals sign (if entered), back through the right-hand side,
+                back through the operator, and finally back through the left-hand side.&nbsp;
+                If the user enters backspace with no left-hand side, an error message should
+                be displayed.<br>
+                Hint:&nbsp; JComponentWithEvents defines the BACK_SPACE constant, which you
+                can use to test the key against in the keyPressed() method.<br>
                 &nbsp;</li>
+            <li><b>Two Operators with Precedence<br>
+            </b>Add the ability to handle expressions with two operators, such as
+                "1+2*3=".&nbsp; You should respect order of operations, so "1+2*3="
+                evaluates to 7, but "1*2+3=" evaluates to 5.&nbsp; You should also still
+                support just one operator, as in "1+2=".</li><br>
         </ol>
     </li>
     <li><b><a name="Animations">Animations</a><br>a. Bouncing Ball and
-        Square<br></b>In the file Lab3BouncingBallAndSquare.java<b>, </b>write the
-        animation in this jar file:<br>
-        &nbsp;&nbsp; <a href="BouncingBallAndSquare.jar">BouncingBallAndSquare.jar</a>&nbsp;
-        (also available in a zip file:&nbsp;
-        <a href="BouncingBallAndSquare-jarfile.zip">
-            BouncingBallAndSquare-jarfile.zip</a>)<br>
+        Square<br></b>In the file BouncingBallAndSquare.java<b>, </b>write the
+        animation found in the BouncingBallAndSquare.jar file. Right click that
+        file in IntelliJ and select 'Run BouncingBallAndSquare.jar'. When you create
+        your BouncingBallAndSquare class, you will need to create a main method and
+        run configuration in order to run it. You will also need to do this for the
+        BallAroundSquare. You can click 'edit configurations' and see how the 'Calculator'
+        one works and replicate it. Don't pay attention to the JAR configurations, they are put there automatically
+        by IntelliJ when you run a JAR file.
+        <br>
+        &nbsp;&nbsp;<br>
         Notes:<ul>
             <li>The ball and square move at different speeds.</li>
             <li>Each bounces as it hits the edges (they do not go even partially
@@ -195,11 +220,10 @@ class MysteryAnimation2 extends JComponentWithEvents {
             <li>Each changes color depending on the direction it is moving</li>
         </ul>
         <p><b>b.&nbsp; Ball Around Square<br>
-        </b>In the file Lab3BallAroundSquare.java<b>, </b>write the animation in
-            this jar file:<br>
-            &nbsp;&nbsp; <a href="BallAroundSquare.jar">BallAroundSquare.jar</a> (also
-            available in a zip file:&nbsp; <a href="BallAroundSquare-jarfile.zip">
-                BallAroundSquare-jarfile.zip</a>)<br>
+        </b>In the file BallAroundSquare.java<b>, </b>write the animation in
+            the ballAroundSquare.jar file. Right click that file in IntelliJ and select
+            'Run ballAroundSquare.jar'<br>
+            &nbsp;&nbsp;<br>
             Notes:</p><ul>
             <li>The blue box is the largest square you can draw with a 10-pixel
                 margin around it (so you will take the minimum of the width and height
