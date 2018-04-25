@@ -1,0 +1,193 @@
+Create a file in this directory named Lab1_answers to record your answers to the written portions.
+
+<ol>
+    <li><b><a name="Short_Answers">Short Answers</a></b><br>
+        In the written portion of your submission, answer each of the following
+        questions.&nbsp; Be very brief, but show your work where appropriate.<br>
+        Assume that "x" and "y" are non-negative integer values, and ignore any
+        errors (such as dividing by zero):<br>
+        &nbsp;<ol type="a">
+            <li>If (x % 2) equals 1, then we know that x is ____________.<br>
+                &nbsp;</li>
+            <li>True or False:&nbsp;&nbsp; (x % y % y) always equals (x % y)?<br>&nbsp;</li>
+            <span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">
+	<li class="MsoNormal" style="line-height: normal;">For this part, assume
+	that "x" and "y" are boolean values (though these are not very good names
+	for boolean values):<br>
+	<br>
+	Fill in the blanks with one of “always”, “sometimes”, or “never”.<span style="">&nbsp;
+	</span>Be sure to show your work, using <i style="">truth tables</i> to prove
+	your answer.<span style="">&nbsp; </span>The first problem is done for you to
+	demonstrate.<br style="">
+	<ol start="1" type="1">
+		<li class="MsoNormal" style="line-height: normal;">!(x || y)<span style="">&nbsp;&nbsp;
+		</span>___<i style="">sometimes</i>___<span class="GramE">_<span style="">&nbsp;
+		</span>equals</span> (x &amp;&amp; y)<br>
+		<br>
+		<span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">
+		<span style="">&nbsp;&nbsp;&nbsp; </span><u>x</u><span style="">&nbsp;&nbsp;&nbsp; </span><u>y</u><span style="">&nbsp;&nbsp;&nbsp;
+		</span><u>(x || y)</u><span style="">&nbsp;&nbsp; </span><u>!(x || y)</u><span style="">&nbsp;
+		</span><u>(x &amp;&amp; y)</u><br>
+		<span style="">&nbsp;&nbsp;&nbsp; </span>T<span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">T</span><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span><span class="SpellE">T</span><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>F<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>T<br>
+		<span style="">&nbsp;&nbsp;&nbsp; </span>T<span style="">&nbsp;&nbsp;&nbsp; </span>F<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>T<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+		<span style="-moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; background: silver">
+		F<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">F</span></span><span style="">&nbsp;&nbsp;&nbsp;
+		</span><br>
+		<span style="">&nbsp;&nbsp;&nbsp; </span>F<span style="">&nbsp;&nbsp;&nbsp; </span>T<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span><span class="SpellE">T</span><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+		<span style="-moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; background: silver">
+		F<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">F</span></span><span style="">&nbsp;&nbsp;&nbsp;
+		</span><br>
+		<span style="">&nbsp;&nbsp;&nbsp; </span>F<span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">F</span><span style="">&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SpellE">F</span><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>T<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>F</span><br>
+		<br>
+		Note:<span style="">&nbsp; </span>The truth table clearly shows that the two
+		expressions are equal when x is true and y is false or when x is false
+		and y is true, but are unequal when both x and y are false or both are
+		true.<br>
+		<br>
+		Note:<span style="">&nbsp; </span>the column labeled (x || y) is not part of the
+		final answer, but is still important to include.<span style="">&nbsp; </span>It
+		is a “helper column”, and it simplifies the computation of the next
+		column.<span style="">&nbsp; </span>You should include helper columns as you
+		deem necessary.<br style="">
+       </li>
+		<li class="MsoNormal" style="line-height: normal;">(!!x)<span style="">&nbsp;&nbsp;
+		</span>________________<span style="">&nbsp; </span>equals x<br style="">
+       </li>
+		<li class="MsoNormal" style="line-height: normal;">(x &amp;&amp; !y) <span style="">
+		&nbsp;&nbsp;</span>________________ <span style="">&nbsp;</span>equals (!x || !y)<br style="">
+       </li>
+		<li class="MsoNormal" style="line-height: normal;">(x &amp;&amp; !y)<span style="">&nbsp;&nbsp;
+		</span>________________<span style="">&nbsp; </span>equals !(x || !y)<br style="">
+       </li>
+	</ol>
+	</li>
+</span></ol></li>
+    <li><b><a name="Tracing">Tracing</a><br></b>In the written portion of your
+        submission, indicate what each of the following will print or (if it is
+        graphical) draw.&nbsp; Do not run these programs.&nbsp; Figure this out by
+        hand.&nbsp; Remember to <u>show your work</u>.<br>
+        &nbsp;<table border="0" width="45%" id="table1">
+            <tbody><tr>
+                <td>a)<br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    &nbsp;</td>
+                <td width="393">
+			<pre><font color="#800000">  public static void main(String[] args) {
+    int x = 5, y = 2, z = 3;
+    System.out.println(x + y * z);
+    System.out.println(x % y % z);
+    System.out.println(10 + 9 / x * z - y);
+  }</font></pre>
+                </td>
+            </tr>
+            <tr>
+                <td>b)<br>
+                    <br>
+                    <br>
+                    <br>
+                    &nbsp;</td>
+                <td width="393">
+			<pre><font color="#800000">  public void paint(Graphics page) {
+    int c = getWidth(), d = getHeight();
+    page.fillRect(c/2-10, 50, 20, 100);
+    page.fillOval(c/4,d*3/4,c*3/4, d/4);
+  }</font></pre>
+                </td>
+            </tr>
+            </tbody></table>
+        <p>&nbsp;</p></li>
+    <li><b><a name="Mystery_Code">Mystery Code</a></b><br>In the written portion of your submission, answer the following question
+        <u>in general</u>, and in <u>just a few words</u> of <u>plain English</u>.&nbsp;
+        The first problem is done for you to demonstrate.<br>
+        <br>
+        Hint:&nbsp; while you should definitely trace the code in this problem by hand to
+        make some sense out of it, you may also wish to actually test the code in a
+        compiler with samples of your choosing, at least to verify that it works as
+        you think it does!<p>
+	<span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">
+	Note:<span style="">&nbsp; </span>these methods may seem a bit confusing, and in
+	fact they are!<span style="">&nbsp; </span>There are some much easier, clearer, and
+	more sensible ways to do the same thing.&nbsp; This is to test your
+	understanding of data and expressions, not to teach the best way to write
+	these methods.<br>
+&nbsp;</span></p><ol>
+            <li type="a">What does this method do (in general)?<b><br></b><br>
+                <font color="#800000" face="Courier New" size="2">&nbsp; public static
+                    boolean mysteryMethodA(int x, int y) {<br>
+                    &nbsp;&nbsp;&nbsp; return ((x % 2) * (y % 2) == 0);<br>
+                    &nbsp; }</font><br>
+                <br>
+                Answer:&nbsp; The product is zero if either (x % 2) is zero and/or (y %
+                2) is 0.&nbsp; (x%2) is 0 if x is even.&nbsp; (y%2) is zero if y is
+                even.&nbsp; And so, <u>the method checks if x and/or y are even</u>.<br>
+                <br>
+                Note:&nbsp; you will receive <u>zero credit</u> for simply explaining,
+                step-by-step, what the method does.&nbsp; For example, this response
+                would receive zero credit:&nbsp; "The method takes the remainder when x
+                is divided by 2 and multiplies it by the remainder when y is divided by
+                2, and then the method returns true if this product is zero and false
+                otherwise."&nbsp; This is all entirely correct, but misses the point of
+                the question, which is to abstract away from the details and determine
+                the essence of the computation.&nbsp; Your final answer (the underlined
+                portion above), must be in <u>just a few words of plain English</u>.<br>
+                &nbsp;</li>
+            <li type="a">What does this method do (in general)?<b><br></b><br>
+                <font color="#800000" face="Courier New" size="2">&nbsp; public static
+                    boolean mysteryMethodB(int x, int y) {<br>
+                    &nbsp;&nbsp;&nbsp; return (((x == 0) &amp;&amp; (y == 0)) ||<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((x != 0) &amp;&amp;
+                    (y != 0) &amp;&amp; ((x/y) + (y/x) == 2)));<br>
+                    &nbsp; }</font><br>
+                <br>
+                <i>Hint:&nbsp; there are several cases to consider!&nbsp; What if x&gt;y?&nbsp;
+                    x==y?&nbsp; x&lt;y?<br>
+                    &nbsp;</i></li>
+            <li type="a">What does this method do (in general)?<b><br></b><br>
+                <span style="font-size: 10pt; font-family: &quot;Courier New&quot;; color: rgb(99, 36, 35);">
+		public static <span class="SpellE">int</span> <span class="SpellE">
+		mysteryMethodC</span>(<span class="SpellE">int</span> x,
+		<span class="SpellE">int</span> y) {<br>
+		<span style="">&nbsp; </span><span class="SpellE">int</span> a = x - y;<br>
+		<span style="">&nbsp; </span><span class="SpellE">int</span> b = 1 -
+		(3*a)/(3*a-1);<br>
+		<span style="">&nbsp; </span>return b*x + (1-b)*y;<br>
+		<span style="">&nbsp;</span>}</span><br>
+                &nbsp;</li>
+        </ol>
+    </li>
+    <li><b><a name="Non-Graphics_Methods">Non-Graphics Methods</a></b><br>
+        Starting from <a href="Lab2.java">Lab2.java</a>, write the unfinished
+        methods.&nbsp; Note that we may include some tests in our autograder besides
+        those included in the provided test methods.<br>
+        &nbsp;</li>
+    <li><b><a name="Painting_Flags">Painting Flags</a><br></b>Paint each of the following flags (one flag per Java file) using only
+        filled rectangles and filled ovals.&nbsp; You should use custom colors, matching
+        the colors in the flags as closely as possible.&nbsp; Also, your flags may not be
+        fixed-sized, but rather they must entirely fill the window, even when the
+        window is resized, leaving a 10-pixel gray margin on all sides (you are
+        not responsible for dealing with window sizes below 50x50).&nbsp; While the window's size may change, you may assume the
+        window will be roughly "flag-shaped" -- you will not be graded on how your
+        flags appear in, say, a tall thin window (which is not at all
+        "flag-shaped").<br><br><b>Note:</b> All these flag images are from the very informational
+        <a href="https://www.cia.gov/library/publications/the-world-factbook/">CIA
+            World Factbook</a>, which includes a
+        <a href="https://www.cia.gov/library/publications/the-world-factbook/docs/flagsoftheworld.html">flags-of-the-world page</a>.&nbsp;
+        <br><br><b>Note:</b> As we are limited to just rectangles and ovals this week, you
+        should replace any stars in flags with ovals (of the same size, location,
+        and color).<b><br><br>Note:</b>&nbsp; This week, you are <u>not</u>
+        responsible for the "thin white stripe" that occurs between stripes when the
+        screen size is not an even multiple of the stripe size.&nbsp; Ask your CA
+        for details.<b><br><br>a. Benin<br></b>(file:&nbsp; Lab2FlagOfBenin.java)<b><br>
+            <img border="0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Benin.svg/2000px-Flag_of_Benin.svg.png" width="80" height="54"></b><b><br><br>b.&nbsp; The Central African Republic<br>
+        </b>(file:&nbsp; Lab2FlagOfTheCentralAfricanRepublic.java)<b><br>
+            <img border="0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Central_African_Republic.svg/255px-Flag_of_the_Central_African_Republic.svg.png" width="98" height="65"></b></li>
+</ol>
