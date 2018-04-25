@@ -21,7 +21,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlagOfBenin.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FlagOfBenin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/FlagOfBenin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -36,7 +36,7 @@
       <file leaf-file-name="FlagOfCentralAfricanRepublic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/FlagOfCentralAfricanRepublic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="358">
               <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -45,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lab2.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Lab2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lab2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2505">
-              <caret line="167" column="31" selection-start-line="167" selection-start-column="31" selection-end-line="167" selection-end-column="31" />
+            <state relative-caret-position="150">
+              <caret line="168" column="22" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
@@ -99,8 +99,8 @@
         <option value="$PROJECT_DIR$/src/main/CentralAfricanRepublic.java" />
         <option value="$PROJECT_DIR$/src/main/FlagOfCentralAfricanRepublic.java" />
         <option value="$PROJECT_DIR$/Lab1.html" />
-        <option value="$PROJECT_DIR$/Lab2.html" />
         <option value="$PROJECT_DIR$/src/main/FlagOfBenin.java" />
+        <option value="$PROJECT_DIR$/Lab2.html" />
       </list>
     </option>
   </component>
@@ -114,9 +114,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,9 +136,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -159,9 +160,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FlagOfBenin">
+  <component name="RunManager" selected="Application.FlagOfCentralAfrica">
     <configuration name="FlagOfBenin" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.FlagOfBenin" />
+      <module name="lab2" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="FlagOfCentralAfrica" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="main.FlagOfCentralAfricanRepublic" />
       <module name="lab2" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
@@ -215,6 +221,7 @@
     <list>
       <item itemvalue="Application.Lab2" />
       <item itemvalue="Application.FlagOfBenin" />
+      <item itemvalue="Application.FlagOfCentralAfrica" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -231,16 +238,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1396" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1396" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32948717" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32948717" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
@@ -258,7 +267,6 @@
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="10" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -462,36 +470,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/FlagRunner.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/FlagOfCentralAfricanRepublic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lab2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2505">
-          <caret line="167" column="31" selection-start-line="167" selection-start-column="31" selection-end-line="167" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#li#0;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#16;n#span#2;n#li#0;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#23;n#span#2;n#li#0;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#3;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#li#2;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#li#2;n#ol#0;n#li#2;n#ol#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Lab2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2775">
@@ -505,6 +483,36 @@
           <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/FlagOfCentralAfricanRepublic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lab2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="168" column="22" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#li#0;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#16;n#span#2;n#li#0;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#23;n#span#2;n#li#0;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#li#2;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#2;n#ol#0;n#li#2;n#ol#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
