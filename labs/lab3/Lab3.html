@@ -1,0 +1,259 @@
+<ol>
+    <li><b><a name="Short_Answers">Short Answers</a></b><br>
+        There are no short answers in this lab!<br>
+        &nbsp;<span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"></span></li>
+
+    <li><b><a name="Tracing">Tracing</a><br></b>In the written portion of your
+        submission, indicate what each of the following will print or draw&nbsp; Do not run these programs.&nbsp; Figure this out by
+        hand.&nbsp; Remember to <u>show your work</u>.<br>&nbsp;<table border="0" width="45%" id="table1">
+            <tbody><tr>
+                <td>a)<br><br><br><br><br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>&nbsp;</td>
+                <td width="393">
+			<pre><font color="#800000">public static void main(String[] args) {
+  int u = 11, v = 4;
+  int w = u/v;
+  double x = u/v;
+  double y = 1.0+u/v;
+  double z = 1.0*u/v;
+  System.out.println(w + "," + x + "," + y + "," + z);
+  w += ((u &gt; v) ? u : v);
+  x *= ((u%v &gt; v%u) ? u : v);
+  y /= ((w &gt; x) ? ((x &gt; Math.pow(y,2)) ? 4 : 3) : 2);
+  z = ((z &lt; x) ? (int)(x/z) : (x/z));
+  System.out.println(w + "," + x + "," + y + "," + z);
+}</font></pre></td>
+            </tr>
+            <tr>
+                <td>b)<br><br><br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    &nbsp;</td>
+                <td width="393">
+			<pre><font color="#000080">public static void main(String[] args) {
+  // Remember:  unicode for 'a' is 97
+  String s = "abcdefg";
+  int i = (int)Math.sqrt(s.length());
+  char c = s.charAt(i);
+  boolean b = ((c == 'c') ? (c&lt;100) : (i&lt;c/100));
+  System.out.println(s + "," + i + "," + c + "," + b);
+  if (s.charAt(s.length()-1) &lt; c)
+    s += s;
+  else if (b == true)
+    s += c;
+  else
+    s += "Go Steelers!";
+  if ((i &gt;= Math.sqrt(c)) || (b != (s.length() == 0)))
+    i *= 2;
+  else if (i &lt; s.length())
+    i *= 4;
+  else
+    i *= 8;
+  b = !b;
+  c++;
+  if (c != s.charAt(i))
+    c++;
+  c++;
+  System.out.println(s + "," + i + "," + c + "," + b);
+}</font></pre>
+                </td>
+            </tr>
+            </tbody></table>
+        <p>&nbsp;</p></li>
+    <li><b><a name="Mystery_Code">Mystery Code</a></b><br>In the written portion of your submission, answer the following question
+        <u>in general</u>, and in <u>just a few words</u> of <u>plain English</u>.<br>&nbsp;<ol>
+            <li type="a">What does this method do (in general)?<b><br></b><br>
+                <font color="#800000" face="Courier New" size="2">public static boolean
+                    f(String s) {<br>
+                    &nbsp; if ((s == null) || (s.length() &gt; 3))<br>
+                    &nbsp;&nbsp;&nbsp; return false;<br>
+                    &nbsp; char c = s.charAt(0);<br>
+                    &nbsp; char d = ((s.length() == 1) ? c : s.charAt(1));<br>
+                    &nbsp; char e = ((s.length() == 3) ? s.charAt(2) : d);<br>
+                    &nbsp; return (c == e);<br>
+                    }</font><br>&nbsp;</li>
+            <li type="a">The preceding method contains a bug!&nbsp; It will crash
+                for one value of s.&nbsp; Which value of s causes the crash, what is the
+                exact cause of the crash, and what exception is thrown?<br>
+                &nbsp;</li>
+            <li type="a">What does this method do (in general)?<pre><font color="#800000">  public static boolean g(int x, int y, int z) {
+    if (x &lt; y) {
+      int temp = x;
+      x = y;
+      y = temp;
+    }
+    if (y &gt;= z)
+      return (x == z);
+    else if (z &gt;= x)
+      return (y == z);
+    else
+      return (x == y);
+  }</font></pre>
+            </li>
+            <li type="a">What does this program do (in general)?<pre><font color="#800000">import javax.swing.*;
+import java.awt.*;
+
+class MysteryAnimation1 extends JComponentWithEvents {
+
+  private int rx = 0;
+  private int ry = 0;
+
+  public void timerFired() {
+    rx = ((rx &lt; getWidth()) ? (rx+20) : 0);
+    ry += 20;
+  }
+
+  public void paint(Graphics2D page) {
+    int height = getHeight();
+    page.fillRect(rx, height-25-ry%height, 50, 50);
+  }
+
+  // Standard main method:
+  public static void main(String[] args) { launch(300, 300); }
+}</font></pre>
+            </li>
+            <li type="a">What does this program do (in general)?<pre><font color="#800000">import javax.swing.*;
+import java.awt.*;
+
+class MysteryAnimation2 extends JComponentWithEvents {
+  private double t = 0;
+
+  public void timerFired()  {
+    t += 0.5;
+  }
+
+  public void paint(Graphics2D page) {
+    int cx = getWidth()/2, cy = getHeight()/2;
+    int r = 100;
+    int x = (int)Math.round(r*Math.cos(t)); // cosine, where t is in radians
+    int y = (int)Math.round(r*Math.sin(t)); // sine, where t is in radians
+    y = Math.abs(y);
+    page.fillOval(cx + x, cy - y, 20, 20);
+  }
+
+  // Standard main method:
+  public static void main(String[] args) { launch(300, 300); }
+}<br>&nbsp;</font></pre>
+            </li>
+        </ol></li>
+    <li><b><a name="Simple_Calculator">Simple Calculator</a><br>
+    </b>For this question, you are to write a simple calculator:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; Simply right click on the demo (simpleCalcDemo.jar) in IntelliJ and click 'Run simpleCalcDemo.jar' to see it.&nbsp;&nbsp;
+        <br>
+        To complete this question:<ol>
+            <li>Run the demo program (simpleCalcDemo.jar), which shows
+                how this program should work once it is completed.</li>
+            <li>Take a look at SimpleCalculator.java. This
+                file contains most of the solution already written for you, making your job
+                much easier.&nbsp; It also contains the specifics for the assignment, so you
+                really must start from this file.</li>
+            <li>Read the comments at the head of the SimpleCalculator.java file.&nbsp; Read
+                them <i>very carefully</i>!</li>
+            <li>Find each @TODO in the SimpleCalculator.java file -- these explain each
+                step in the assignment.&nbsp; There are 16 steps, but most are fairly simple
+                (though a few might be a bit more challenging).<br>
+                <i>Hint:&nbsp; the program says it passes all tests now, but that's only
+                    because the tests themselves are very incomplete!&nbsp; Part of your
+                    assignment is to write reasonable tests!</i></li><br>
+        </ol>
+    </li>
+    <li><b><a name="Bonus/Optional:_Simple_Calculator_Extensions">
+        <span style="background-color: #FFFF00">Bonus/Optional</span>: Simple
+        Calculator Extensions</a><br>
+    </b>Here are two extensions you may add to the simple calculator for bonus.&nbsp;
+        If you plan to do these, first commit your regular calculator solution to git.
+        This way, if you screw this up beyond belief, you wont lose all the work you did before.<ol>
+            <li><b>Backspace<br>
+            </b>Add the ability for the user to enter a backspace, which undoes the last
+                letter typed.&nbsp; The user should be able to backspace multiple times,
+                back through the equals sign (if entered), back through the right-hand side,
+                back through the operator, and finally back through the left-hand side.&nbsp;
+                If the user enters backspace with no left-hand side, an error message should
+                be displayed.<br>
+                Hint:&nbsp; JComponentWithEvents defines the BACK_SPACE constant, which you
+                can use to test the key against in the keyPressed() method.<br>
+                &nbsp;</li>
+            <li><b>Two Operators with Precedence<br>
+            </b>Add the ability to handle expressions with two operators, such as
+                "1+2*3=".&nbsp; You should respect order of operations, so "1+2*3="
+                evaluates to 7, but "1*2+3=" evaluates to 5.&nbsp; You should also still
+                support just one operator, as in "1+2=".</li><br>
+        </ol>
+    </li>
+    <li><b><a name="Animations">Animations</a><br>a. Bouncing Ball and
+        Square<br></b>In the file BouncingBallAndSquare.java<b>, </b>write the
+        animation found in the BouncingBallAndSquare.jar file. Right click that
+        file in IntelliJ and select 'Run BouncingBallAndSquare.jar'. When you create
+        your BouncingBallAndSquare class, you will need to create a main method and
+        run configuration in order to run it. You will also need to do this for the
+        BallAroundSquare. You can click 'edit configurations' and see how the 'Calculator'
+        one works and replicate it. Don't pay attention to the JAR configurations, they are put there automatically
+        by IntelliJ when you run a JAR file.
+        <br>
+        &nbsp;&nbsp;<br>
+        Notes:<ul>
+            <li>The ball and square move at different speeds.</li>
+            <li>Each bounces as it hits the edges (they do not go even partially
+                past the edges)</li>
+            <li>Each changes color depending on the direction it is moving</li>
+        </ul>
+        <p><b>b.&nbsp; Ball Around Square<br>
+        </b>In the file BallAroundSquare.java<b>, </b>write the animation in
+            the ballAroundSquare.jar file. Right click that file in IntelliJ and select
+            'Run ballAroundSquare.jar'<br>
+            &nbsp;&nbsp;<br>
+            Notes:</p><ul>
+            <li>The blue box is the largest square you can draw with a 10-pixel
+                margin around it (so you will take the minimum of the width and height
+                when computing the size of the square)</li>
+            <li>The circle pauses on the corners and is red while it pauses.</li>
+            <li>Hint:&nbsp; the animation itself does not pause when the circle is on the
+                corner -- <b>the timer keeps firing away as normal</b>.&nbsp; Only your logic
+                must basically <i>ignore</i> the timer for a little while at the right
+                times.&nbsp; To do this, perhaps you might introduce a counter (maybe
+                called the "pauseCounter") that is set to 0 when you are <i>not</i>
+                paused.&nbsp; When you want to pause, set the counter to some positive
+                value (say, 10, to start).&nbsp; Now, when timerFired is called, if your
+                pause counter is positive, just decrement it and return immediately.&nbsp;
+                Thus, you will ignore some number (again, say 10, to start) of calls to
+                timerFired, and only when the pauseCounter reaches 0 will you again
+                start processing the timer events.</li>
+            <li>Also, you will want to use the page.drawString method to draw the
+                text.&nbsp; It takes 3 parameters -- a String, and an x and y location
+                at which to draw the string.&nbsp; The x is the left edge of the string
+                and the y is the "baseline", which is near the bottom of the string.&nbsp;
+                For example, try this line of code:<br>
+                &nbsp;&nbsp; page.drawString("Carpe diem", 50, 100);<br>
+                Then, read the online API for the drawString method in the Graphics class for
+                more details.</li>
+            <li>You will also want to use the substring method of the String class.&nbsp;
+                This method takes 2 parameters -- the starting index (inclusive) and the
+                ending index (exclusive), and returns the substring between them.&nbsp;
+                For example, "abcdefg".substring(2,5) returns the string "cde". </li>
+            <li>Another hint:&nbsp; you may want to draw two strings, one per
+                visible line, using different substrings of a third string.</li>
+        </ul>
+    </li>
+</ol>
