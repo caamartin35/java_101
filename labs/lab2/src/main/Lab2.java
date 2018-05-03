@@ -36,7 +36,8 @@ class Lab2 {
     // division and multiplication of integers).
 
     public static int nearestBusStop(int street) {
-        return 42;
+        int x =  (5*street + 16)/40 ;
+        return x*8;
     }
 
     public static void testNearestBusStop() {
@@ -47,7 +48,7 @@ class Lab2 {
         assert(nearestBusStop(8) == 8);
         assert(nearestBusStop(11) == 8);
         assert(nearestBusStop(12) == 8);
-        assert(nearestBusStop(13) == 16);
+        assert(nearestBusStop(13) == 8);
         System.out.println("Passed all tests!");
     }
 
@@ -60,7 +61,7 @@ class Lab2 {
     // that the line has an x-intercept.
 
     public static double xIntercept(double m, double b) {
-        return 42.0; // replace this with your answer!
+        return -1*(b/m); // replace this with your answer!
     }
 
     public static void testXIntercept() {
@@ -80,7 +81,7 @@ class Lab2 {
     // formula).  You are assured the line has at least one x-intercept.
 
     public static double xInterceptOfParabola(double a, double b, double c) {
-        return 42.0;
+        return (-1*b - Math.sqrt((b*b) - (4*a*c))) /(2*a);
     }
 
     public static void testXInterceptOfParabola() {
@@ -97,8 +98,9 @@ class Lab2 {
 
     // This method takes an integer n and returns true if n is a perfect square,
     // and false otherwise.
-    public static boolean isPerfectSquare(int n) {
-        return false;
+    public static boolean isPerfectSquare(double n) {
+        double x = Math.sqrt(n);
+        return x*x == n;
     }
 
     public static void testIsPerfectSquare() {
@@ -107,7 +109,11 @@ class Lab2 {
         // you should be thorough in testing all reasonable boundary cases.
         // Discuss what this means with your CA!
         System.out.println("You must write your own tests here!");
-        assert(false); // <-- delete this line when you write your own tests!
+        assert(isPerfectSquare(4) == true);
+        assert(isPerfectSquare(16) == true);
+        assert(isPerfectSquare(5) == false);
+        assert(isPerfectSquare(0) == true);
+        assert(isPerfectSquare(40) == false);
         System.out.println("Passed all tests!");
     }
 
@@ -134,8 +140,9 @@ class Lab2 {
     // for some non-lowercase values, so I used a second, similar test
     // involving 'z' rather than 'a'), then combined them arithmetically...
 
-    public static char toUpperCase(char c) {
-        return (char)42;
+    public static char toUpperCase(char c ) {
+        double atLeastSmallA = Math.signum(c+1-'a');
+        return (char) (c+ (Math.signum(c+1-'a') + Math.signum('z' - (c-1)))/2 * (-32));
     }
 
     public static void testToUpperCase() {
