@@ -17,8 +17,8 @@ public class Lab1 {
     // This method takes an integer and returns true if it is odd,
     // and false otherwise.
     public static boolean isOdd(int x) {
-        return true;
-    }
+                return x % 2 == 1 || x % 2 == -1;
+        }
 
     public static void testIsOdd() {
         System.out.print("Testing isOdd... ");
@@ -35,8 +35,8 @@ public class Lab1 {
     ////////////////////////////////////////////////////
 
     // This method takes 3 integers and returns the value of the largest integer.
-    public static int maxOf3(int x, int y, int z) {
-        return 42;
+    public static int maxOf3(double x, double y, double z) {
+     return (int) Math.max(Math.max(x,y),z);
     }
 
     public static void testMaxOf3() {
@@ -57,9 +57,10 @@ public class Lab1 {
     // This method takes 3 integers and returns the median, or middle, value of
     // the three.  Note:  to solve this problem, you must call the
     // maxOf3 method you wrote above.
-    public static int medianOf3(int x, int y, int z) {
-        int max = maxOf3(x, y, z); // how would you use this?  hmmmm....
-        return 42;
+    public static int medianOf3(double x, double y, double z) {
+        double max = maxOf3(Math.min(x,y), Math.min(y,z), Math.min(x,z));
+        return (int) max;
+
     }
 
     public static void testMedianOf3() {
@@ -80,7 +81,8 @@ public class Lab1 {
     // This method takes one integer and returns the value of that number's
     // hundreds digit (or 0 if it does not have a hundreds digit).
     public static int hundredsDigit(int i) {
-        return 42;
+        int x = i/100;
+        return Math.abs(x % 10);
     }
 
     public static void testHundredsDigit() {
@@ -105,7 +107,7 @@ public class Lab1 {
     // the squares of the differences in x and y).
     // Hint:  You may wish to use both Math.pow and Math.sqrt here.
     public static double distance(double x0, double y0, double x1, double y1) {
-        return 42.0;
+        return Math.sqrt(Math.pow((x1-x0),2) + Math.pow((y1-y0),2));
     }
 
     public static void testDistance() {
@@ -140,11 +142,11 @@ public class Lab1 {
         double s1 = distance(x0, y0, x1, y1);
         double s2 = distance(x0, y0, x2, y2);
         double s3 = distance(x1, y1, x2, y2);
-        // double c = maxOf3(s1, s2, s3);
-        // double a = minOf3(s1, s2, s3);
-        // double b = medianOf3(s1, s2, s3);
+        double c = maxOf3(s1, s2, s3);
+        double a = Math.min(Math.min(s1, s2), s3);
+        double b = medianOf3(s1, s2, s3);
         // now, verify that a^2 + b^2 almost equals c^2.
-        return false;
+        return c*c == a*a + b*b;
     }
 
     public static void testIsRightTriangle() {
@@ -191,8 +193,10 @@ public class Lab1 {
     // You may ignore the cases where the month, day, or year are out of bounds.
 
     public static int dayOfWeek(int month, int day, int year) {
-        return 42; // replace this with your answer!
-    }
+
+        int N = day + 2*month + (3*(month+1)/5) + year + (year/4) -(year/100) + (year/400) + 2 ;
+        return N;    }
+
 
     public static void testDayOfWeek() {
         System.out.print("Testing dayOfWeek... ");
