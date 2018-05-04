@@ -215,10 +215,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.Lab4InvadersDemo.jar">
-    <configuration name="Calculator" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="main.SimpleCalculator" />
+  <component name="RunManager" selected="Application.Lab4">
+    <configuration name="Lab4" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="main.Lab4" />
       <module name="lab4" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -240,20 +241,11 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="BouncingBallAndSquare.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/BouncingBallAndSquare.jar" />
-    </configuration>
-    <configuration name="Lab4AnimationDemo.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
+    <configuration name="Lab4AnimationDemo.jar" type="JarApplication" factoryName="JAR Application">
       <option name="JAR_PATH" value="$PROJECT_DIR$/Lab4AnimationDemo.jar" />
     </configuration>
     <configuration name="Lab4InvadersDemo.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/Lab4InvadersDemo.jar" />
-    </configuration>
-    <configuration name="ballAroundSquare.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/ballAroundSquare.jar" />
-    </configuration>
-    <configuration name="simpleCalcDemo.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/simpleCalcDemo.jar" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -278,20 +270,13 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.Calculator" />
-      <item itemvalue="JAR Application.simpleCalcDemo.jar" />
-      <item itemvalue="JAR Application.ballAroundSquare.jar" />
-      <item itemvalue="JAR Application.BouncingBallAndSquare.jar" />
+      <item itemvalue="Application.Lab4" />
       <item itemvalue="JAR Application.Lab4AnimationDemo.jar" />
       <item itemvalue="JAR Application.Lab4InvadersDemo.jar" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JAR Application.Lab4InvadersDemo.jar" />
-        <item itemvalue="JAR Application.Lab4AnimationDemo.jar" />
-        <item itemvalue="JAR Application.BouncingBallAndSquare.jar" />
-        <item itemvalue="JAR Application.ballAroundSquare.jar" />
-        <item itemvalue="JAR Application.simpleCalcDemo.jar" />
       </list>
     </recent_temporary>
   </component>
