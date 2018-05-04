@@ -15,8 +15,12 @@
       <file leaf-file-name="Lab2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Lab2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2775">
-              <caret line="195" column="18" selection-start-line="195" selection-start-column="18" selection-end-line="195" selection-end-column="18" />
+            <state relative-caret-position="-1231">
+              <caret line="86" column="51" lean-forward="true" selection-start-line="86" selection-start-column="51" selection-end-line="86" selection-end-column="51" />
+              <folding>
+                <element signature="e#2450#2451#0" expanded="true" />
+                <element signature="e#2511#2512#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -24,8 +28,13 @@
       <file leaf-file-name="FlagOfBenin.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/FlagOfBenin.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="268">
               <caret line="29" selection-start-line="29" selection-end-line="29" />
+=======
+            <state relative-caret-position="-2">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+>>>>>>> 2c61e34a34c31312974ecb8444caefeea078eefb
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlagOfCentralAfricanRepublic.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FlagOfCentralAfricanRepublic.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/FlagOfCentralAfricanRepublic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="434">
+              <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,8 +57,13 @@
       <file leaf-file-name="Lab2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lab2.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="165">
               <caret line="169" column="19" lean-forward="true" selection-start-line="169" selection-start-column="19" selection-end-line="169" selection-end-column="19" />
+=======
+            <state relative-caret-position="2520">
+              <caret line="168" column="22" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="22" />
+>>>>>>> 2c61e34a34c31312974ecb8444caefeea078eefb
               <folding>
                 <element signature="n#style#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
@@ -63,15 +77,6 @@
                 <element signature="n#style#0;n#span#0;n#p#0;n#li#2;n#ol#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#li#2;n#ol#0;n#li#2;n#ol#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JComponentWithEvents.class" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/JComponentWithEvents.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -93,18 +98,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/Lab2.java" />
         <option value="$PROJECT_DIR$/src/main/FlagRunner.java" />
         <option value="$PROJECT_DIR$/src/main/Benin.java" />
         <option value="$PROJECT_DIR$/src/main/CentralAfricanRepublic.java" />
-        <option value="$PROJECT_DIR$/src/main/FlagOfCentralAfricanRepublic.java" />
         <option value="$PROJECT_DIR$/Lab1.html" />
-        <option value="$PROJECT_DIR$/src/main/FlagOfBenin.java" />
         <option value="$PROJECT_DIR$/Lab2.html" />
+        <option value="$PROJECT_DIR$/src/main/FlagOfBenin.java" />
+        <option value="$PROJECT_DIR$/src/main/Lab2.java" />
+        <option value="$PROJECT_DIR$/src/main/FlagOfCentralAfricanRepublic.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1396" />
     <option name="height" value="877" />
@@ -114,6 +119,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -136,9 +142,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -238,31 +243,39 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="23" width="1396" height="877" extended-state="6" />
+=======
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+>>>>>>> 2c61e34a34c31312974ecb8444caefeea078eefb
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32948717" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32827586" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32948717" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.16137931" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+<<<<<<< HEAD
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info id="Designer" order="2" />
+=======
+      <window_info id="Favorites" order="5" side_tool="true" />
+>>>>>>> 2c61e34a34c31312974ecb8444caefeea078eefb
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -270,6 +283,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32948717" />
@@ -287,6 +301,11 @@
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32948717" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
+=======
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+>>>>>>> 2c61e34a34c31312974ecb8444caefeea078eefb
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -366,13 +385,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
-    <entry file="file://$USER_HOME$/Downloads/JComponentWithEvents.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/JComponentWithEvents.class" />
     <entry file="file://$PROJECT_DIR$/src/main/FlagRunner.java" />
     <entry file="file://$PROJECT_DIR$/src/main/Lab2.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -482,25 +495,48 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
-    <entry file="file://$USER_HOME$/Downloads/JComponentWithEvents.class">
+    <entry file="file://$USER_HOME$/Downloads/JComponentWithEvents.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/FlagRunner.java" />
+    <entry file="file://$PROJECT_DIR$/Lab2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        <state relative-caret-position="2520">
+          <caret line="168" column="22" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#li#0;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#16;n#span#2;n#li#0;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#23;n#span#2;n#li#0;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ol#0;n#li#0;n#span#0;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#li#2;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#2;n#ol#0;n#li#2;n#ol#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/FlagRunner.java" />
     <entry file="file://$PROJECT_DIR$/src/main/Lab2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2775">
-          <caret line="195" column="18" selection-start-line="195" selection-start-column="18" selection-end-line="195" selection-end-column="18" />
+        <state relative-caret-position="-1231">
+          <caret line="86" column="51" lean-forward="true" selection-start-line="86" selection-start-column="51" selection-end-line="86" selection-end-column="51" />
+          <folding>
+            <element signature="e#2450#2451#0" expanded="true" />
+            <element signature="e#2511#2512#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/FlagOfBenin.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="268">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
+=======
+        <state relative-caret-position="-2">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+>>>>>>> 2c61e34a34c31312974ecb8444caefeea078eefb
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -509,14 +545,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/FlagOfCentralAfricanRepublic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="434">
+          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Lab2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -537,6 +574,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 2c61e34a34c31312974ecb8444caefeea078eefb
   </component>
   <component name="masterDetails">
     <states>

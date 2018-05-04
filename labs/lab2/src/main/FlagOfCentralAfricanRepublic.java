@@ -30,7 +30,35 @@ import javax.swing.*;
 public class FlagOfCentralAfricanRepublic extends JComponent {
 
     public void paint(Graphics page) {
-        // Place your paint code here!
+        int w = getWidth();
+        int h = getHeight();
+        int s = (w - 20)/6;
+        int r = (h - 20)/6;
+        Color darkBlue = new Color(0,0,128);
+        page.setColor(darkBlue);
+        page.fillRect(0+10,0+10,2*(w-20)/5  ,(h-20)/4   );
+        page.setColor(darkBlue);
+        page.fillRect(3*(w-20)/5 + 10,0 + 10,2*(w-20)/5 , (h-20)/4   );
+        page.setColor(Color.white);
+        page.fillRect(0+10,(h-20)/4 +10  ,2*(w-20)/5,(h-20)/4);
+        page.setColor(Color.white);
+        page.fillRect(3*(w-20)/5 + 10 ,(h-20)/4 + 10,2*(w-20)/5 ,(h-20)/4  );
+        Color darkGreen = new Color(0,153,0);
+        page.setColor(darkGreen);
+        page.fillRect(0+10,2*(h-20)/4 + 10 ,2*(w-20)/5 ,(h-20)/4 );
+        page.setColor(darkGreen);
+        page.fillRect(3*(w-20)/5 +10,2*(h-20)/4 + 10,2*(w-20)/5 ,(h-20)/4 );
+        Color mustardYellow = new Color(245,183,14);
+        page.setColor(mustardYellow);
+        page.fillRect(0 + 10,3*(h-20)/4 + 10,2*(w-20)/5 ,(h-20)/4 );
+        page.setColor(mustardYellow);
+        page.fillRect(3*(w-20)/5 + 10,3*(h-20)/4 + 10,2*(w-20)/5,(h-20)/4 );
+        page.setColor(Color.red);
+        page.fillRect(2*(w-20)/5 + 10 , 0 +10 ,(w-20)/5 ,h - 20);
+        page.setColor(mustardYellow);
+        page.fillOval(w/12 + 10,h/24 + 10 ,(w-20)/6,(h-20)/6 );
+
+
     }
 
 

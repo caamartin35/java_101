@@ -29,8 +29,21 @@ import javax.swing.*;
 public class FlagOfBenin extends JComponent {
 
     public void paint(Graphics page) {
+        int w = getWidth();
+        int h = getHeight();
+        int wr= w - 20;
+        int hr = h - 20;
+        page.setColor(Color.yellow);
+        page.fillRect(wr/3 + 10,10,2*wr/3,hr/2 );
+        page.setColor(Color.red);
+        page.fillRect(wr/3 + 10,hr/2 + 10,2*wr/3, hr/2);
+        page.setColor(Color.green);
+        page.fillRect(10,10,wr/3,hr);
+
+
         // Place your paint code here!
     }
+
 
     //////////////////////////////////////////////
     ///           END OF YOUR CODE             ///
