@@ -1,0 +1,191 @@
+<div >A note before you start: These are HARD. Do not get frustrated if you cannot do them at first. Think about them,
+take time, and ask for help if truly needed. This should not be just an afternoon of work. This is harder than the
+previous labs.</div>
+<ol>
+    <li><b><a name="Short_Answers">Short Answers</a></b><br>
+        In the written portion of your submission, answer each of the following
+        questions.&nbsp; Be very brief, but show your work where appropriate.<br>
+        Assume that "x" and "y" are <i>possibly-negative</i> integer values,
+        and "a", "b", and "c" are boolean values, and ignore any
+        errors (such as dividing by zero):<br>
+        &nbsp;<ol type="a">
+            <li>The following code does not loop forever because of ____________.<br>
+                <font face="Courier New"><font size="2" color="#000000">&nbsp; </font>
+                    <font size="2">int<font color="#000000"> i</font>=0<font color="#000000">;</font><br>
+                        <font color="#000000">&nbsp; </font>while<font color="#000000"> </font>(<font color="#000000">i
+                        </font>&lt;=<font color="#000000"> </font>0)<br>
+                        <font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp; i</font>--</font></font><font color="#000000"><font size="2" face="Courier New">;</font><br>
+                    &nbsp;</font></li>
+            <li>If <font face="Courier New" size="2">((Math.pow(x,2) &lt; 15) &amp;&amp;
+                (Math.abs(x) &gt; x))</font> is true, then x must be between&nbsp; ____________
+                and ___________ (inclusive).<br>
+                &nbsp;</li>
+            <li><span style="font-size: 12pt; font-family: 'Times New Roman',serif">Fill
+	in the blank with one of "always", "sometimes", or "never".<span style="">&nbsp;
+	</span>Be sure to show your work, using a <span style="">truth table</span> to
+	prove your answer:<br>
+	</span><font face="Courier New" size="2">((a || b) ? (!a &amp;&amp; b) : (a || !b))</font>&nbsp;&nbsp;
+                ________________&nbsp; equals <font face="Courier New" size="2">(!a)</font><br>&nbsp;</li>
+        </ol></li>
+    <li><b><a name="Mystery_Code">Mystery Code</a></b><br>In the written portion of your submission, state what
+        each of the following methods do <u>in general</u>, and in <u>just a few words</u> of
+        <u>plain English</u>.<br>
+        <br>
+        <b>a)</b><pre><font color="#800000">public static boolean f(int x) {
+  assert(x &gt; 0);
+  boolean b = false;
+  while (x &gt; 0) {
+    if (x % 10 == 3)
+      b = !b;
+    x = x/10;
+  }
+  return b;
+}</font></pre>
+        <b>b)</b><pre><font color="#000080">public static String g(int x) {
+  if (x == 0) return "0";
+  String s = "";
+  int y = Math.abs(x);
+  while (y &gt; 0) {
+    s = (y%2) + s;
+    y /= 2;
+  }
+  if (x &lt; 0) s = "-" + s;
+  return s;
+}</font></pre>
+    </li>
+    <li><b><a name="Non-Graphical_Programming_Problems">Non-Graphical
+        Programming Problems</a><br></b>Do the following problems as defined by their comments in the file
+        <a href="Lab4.java">Lab4.java</a>.&nbsp; Read the comments and review the test
+        cases carefully!<ol type="a">
+            <li><b><a name="factorial">factorial</a></b></li>
+            <li><b><a name="gcd">gcd</a></b></li>
+            <li><b><a name="lcm">lcm</a></b></li>
+            <li><b><a name="indexOf">indexOf</a></b></li>
+            <li><b><a name="lastIndexOf">lastIndexOf</a></b></li>
+            <li><b><a name="isSubstring">isSubstring</a></b></li>
+            <li><b><a name="nthHappyNumber">nthHappyNumber</a></b><br>&nbsp;</li>
+        </ol></li>
+    <li><b><a name="Painting_Flags">Painting Flags</a> (United States)<br></b>Paint the United
+        States flag <u><b>using loops</b></u> for the stripes and the stars (which
+        will be painted as ovals).&nbsp; You should use custom colors, matching
+        the colors in the flags as closely as possible.&nbsp; Also, your flags may not be
+        fixed-sized, but rather they must entirely fill the window, even when the
+        window is resized.&nbsp; While the window's size may change, you may assume the
+        window will be roughly "flag-shaped" -- you will not be graded on how your
+        flags appear in, say, a tall thin window (which is not at all
+        "flag-shaped").<br><br><b>Note:</b> As we are limited to just rectangles and ovals this week, you
+        should replace any stars in flags with ovals (of the same size, location,
+        and color).<b><br><br>a. United States<br></b>(file:&nbsp; Lab4FlagOfUnitedStates.java)<b><br>
+            <img border="0" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png" width="103" height="54"></b>(<a href="https://www.cia.gov/library/publications/the-world-factbook/flags/flagtemplate_us.html">larger
+            image</a> with details)<br>&nbsp;</li>
+    <li><b><a name=wordsearchContains">
+        WordsearchContains</a><br></b>In the file Lab4.java, write the following method:<br><b>
+        <font size="2" color="#800000" face="Courier New">&nbsp;&nbsp; public static
+            boolean wordsearchContains(String wordsearch, String word)</font><br></b>This method takes a two strings, the first representing a wordsearch
+        (stored in a single string!), and returns true if the second string occurs
+        in that wordsearch and false otherwise.<br><br>To represent a wordsearch as a string, we simply store each row concatenated
+        to the next where we separate the rows with a | (that is, a vertical bar, or
+        a pipe).&nbsp; So, consider this wordsearch:<br><br>
+        <font face="Courier New">t a c w<br>n o o c<br>d o g x<br></font><br>The rows are: "<font face="Courier New">tacw</font>", "<font face="Courier New">nooc</font>",
+        and "<font face="Courier New">dogx</font>", so we represent the entire
+        wordsearch as: "<font face="Courier New">tacw|nooc|dogx</font>".<br>Note that this wordsearch contains:<br>
+        <br><font face="Courier New">cat<br>cod<br>coon<br>dog<br>ox</font><br><br>You are guaranteed the wordsearch contains only lowercase letters, and that
+        the rows are all the same positive length (you do not need to handle other
+        cases in any way).<br><br>Here is a test method for you:<pre><font color="#800000"><b>  public static void testWordsearchContains() {
+    System.out.print("Testing wordsearchContains... ");
+    // These tests cover this wordsearch:
+    //   t a c w
+    //   n o o c
+    //   d o g x
+    assert(wordsearchContains("tacw|nooc|dogx", "cat"));
+    assert(wordsearchContains("tacw|nooc|dogx", "cod"));
+    assert(wordsearchContains("tacw|nooc|dogx", "coon"));
+    assert(wordsearchContains("tacw|nooc|dogx", "dog"));
+    assert(wordsearchContains("tacw|nooc|dogx", "ox"));
+    assert(!wordsearchContains("tacw|nooc|dogx", "caw"));
+    assert(!wordsearchContains("tacw|nooc|dogx", "cow"));
+    assert(!wordsearchContains("tacw|nooc|dogx", "con"));
+    assert(!wordsearchContains("tacw|nooc|dogx", "dogs"));
+    assert(!wordsearchContains("tacw|nooc|dogx", "ax"));
+    System.out.println("Passed all tests!");
+  }</b></font></pre><b>Note:&nbsp; </b>This approach of representing a 2-dimensional board in a
+        1-dimensional string is not a very good idea.&nbsp; Soon, we will learn about
+        other ways we can more naturally represent this data, such as in a
+        2-dimensional array.</li><br>
+    <li><b><a name="nthEmirpsPrime">nthEmirpPrime</a><br>
+    </b>In the file Lab4.java, write the method:<b><br>
+    </b><span style="">
+	<span style="font-size: 10pt; font-family: &quot;Courier New&quot;; color: maroon;">
+	&nbsp;&nbsp; public static <span class="SpellE">int</span> <span class="GramE">
+	nthEmirpPrime(</span>int n)<br>
+	</span></span>This method takes an int n and returns the nth "Emirp prime",
+        where an Emirp prime is a prime number which becomes a different prime
+        number when its decimal digits are reversed.&nbsp; For example, 13 is an
+        Emirp prime because when we reverse the digits we get 31, which is also
+        prime.&nbsp; 2, 3, 5, 7, and 11 are all examples of primes that are not
+        Emirp primes because they are the <i>same prime</i> when the digits are
+        reversed.&nbsp; Here are the first several Emirp primes:<br>
+        &nbsp; 13, 17, 31, 37, 71, 73, 79, 97, 107, 113, 149, 157, 167, 179, 199,...<br>
+        So if n==1, your method should return 13.&nbsp; If n==2, it should return
+        17.&nbsp; And so on.&nbsp; If n is less than 1, your method should return
+        -1.<br>
+        <br>
+        Aside:&nbsp; in case you missed it, <i>emirp</i> is <i>prime</i> spelled
+        backwards.&nbsp; Also, we didn't make this up (look up "emirp" on
+        Wikipedia)!<br>
+        &nbsp;</li>
+    <li><b><a name="mostCommonVowel">mostCommonVowel</a></b><br>
+        In the file Lab4.java, write the method:<b><br>
+        </b><span style="font-size: 10pt; font-family: Courier New; color: maroon">
+	&nbsp;&nbsp; public static <span class="SpellE">char mostCommonVowel</span>(String s)<br>
+	</span>This method takes one string and returns the lowercase vowel ('a',
+        'e', 'i', 'o', or 'u') that occurs most often in the string, regardless of
+        case (so "Aha!" contains two a's).&nbsp; In the case of a tie, the first
+        vowel alphabetically is returned (so "Yippee, I say!" would return 'e', even
+        though it also has 2 i's).&nbsp; If the string is null or does not contain a
+        vowel, the method should return ((char)0), which is the character with
+        unicode value 0 (which no character has!).<br>
+        &nbsp;</li>
+    <li><b><a name="Loopy_Animation">"Loopy" Animation</a><br></b>
+        First, take a close look at the
+        <a href="./nestedLoopsInGraphics.html">
+            notes on nested loops in graphics</a>.&nbsp; Compile that code, run
+        it, be sure you thoroughly understand it, because you're going to need it!&nbsp;&nbsp;
+        Do not start this problem until you understand those
+        notes very well!<br>
+        <br>
+        Then, in the file
+        Lab4Animation.java, write the "loopy" animation shown in Lab4AnimationDemo.jar
+        Carefully review
+        the program so you do not omit any details (such as pausing, or resizing
+        with arrows, or clicking to move the selection).<br>
+        <br>
+        Hint:&nbsp; divide-and-conquer!&nbsp; That is, solve this problem in small,
+        independent sub-problems.&nbsp; Also, use top-down design, which basically
+        means to solve each sub-problem using plenty of well-chosen helper methods.<br>&nbsp;</li>
+    <li><b><a name="longestCommonSubstringLength">
+        LongestCommonSubstringLength</a><br>
+    </b>In the file Lab4.java, write the method:<b><br>
+    </b><span style="font-size: 10pt; font-family: Courier New; color: maroon">
+	&nbsp;&nbsp; public static <span class="SpellE">int</span>
+	longestCommonSubstringLength(String s1, String s2)<br>
+	</span>This method takes two strings and returns the length of the longest
+        string s3 such that both s1 and s2 contain s3.&nbsp; If no such string
+        exists (say, if either s1 or s2 is null), then your method should return 0.<br>
+        <br>
+        Note:&nbsp; <i><u>your method must not create any new strings </u></i>
+        (because that would be very inefficient!).&nbsp; The string "s3" in the
+        description is just to help you understand the problem.&nbsp; You may not
+        create such an "s3" in your solution, and in fact you should not have any
+        variables of type String except s1 and s2, which you should not modify.<br>
+        <br>
+        Also:&nbsp; the only methods in the String class you may use are charAt()
+        and length().<br>
+        &nbsp;</li>
+    <li><b><a name="Simple_Invaders_Game">
+        Simple Invaders Game</a><br></b>In the file Hw4BonusInvaders.java, write this
+        simple version of a SpaceInvaders-like game in Lab4InvadersDemo.jar
+        <br>
+        Hint:&nbsp; you may want to use Math.random() here.&nbsp; Or you can read
+        about using the Random class.&nbsp; Your choice.</li>
+</ol>
