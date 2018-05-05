@@ -3,7 +3,7 @@ package main;
 import java.awt.*;
 import javax.swing.*;
 
-public class DrawPad extends JComponent {
+public class DrawPad extends JComponentWithEvents {
 
     public void paint(Graphics page) {
         // Place your paint code here!

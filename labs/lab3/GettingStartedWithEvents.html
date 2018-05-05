@@ -1,0 +1,233 @@
+<ol>
+    <li><b><a name="timerFired_Events">timerFired Events</a><br>
+        &nbsp;</b><ol type="a">
+        <li><b><a name="Beeping">Beeping</a> (using JComponentWithEvents)</b><pre><font color="#800000"><b>// BeepingDemo.java
+// Demonstrates the timerFired event in JComponentWithEvents.</b></font></pre>
+            <pre><font color="#800000"><b>// <span style="background-color: #FFFF00">To compile and run this Java file, you must:</span>
+// 1. Download current JComponentsWithEvents.class file from here:
+//       <a href="http://www.kosbie.net/cmu/JComponentWithEvents/">http://www.kosbie.net/cmu/JComponentWithEvents/</a>
+//    and place it in the same directory as your Java program.
+// 2. Include a main method that calls the "launch" method
+//    defined in JComponentWithEvents (see below).</b></font></pre>
+            <pre><font color="#800000"><b>import javax.swing.*;
+import java.awt.*;</b></font></pre>
+            <pre><font color="#800000"><b>class BeepingDemo <span style="background-color: #FFFF00">extends JComponentWithEvents</span> {
+
+  <span style="background-color: #FFFF00">// This method is called at regular intervals by the timer.</span>
+  <span style="background-color: #FFFF00">public void timerFired()</span>  {
+    beep();
+  }</b></font></pre>
+            <pre><font color="#800000"><b>  public void paint(Graphics2D page) {
+    page.fillRect(50, 50, 50, 50);
+  }</b></font></pre>
+            <pre><font color="#800000"><b>  // Standard main method:
+  public static void main(String[] args) { <span style="background-color: #FFFF00">launch(500, 400)</span>; }
+}</b></font></pre>
+        </li>
+        <li><b><a name="Animation_(with_an_instance_variable)">Animation (with
+            an instance variable)</a></b><pre><b><font color="#000080">// AnimationDemo.java
+// Demonstrates the timerFired event in JComponentWithEvents,
+// and using an instance variable to retain data between method calls
+// (to the event handlers and the paint method).</font></b></pre>
+            <pre><b><font color="#000080">import javax.swing.*;
+import java.awt.*;</font></b></pre>
+            <pre><b><font color="#000080">class AnimationDemo extends JComponentWithEvents {</font></b></pre>
+            <pre><b><font color="#000080">  <span style="background-color: #FFFF00">// this instance variable persists between method calls!</span>
+  <span style="background-color: #FFFF00">private int rectX = 50;</span></font></b></pre>
+            <pre><b><font color="#000080">  public void timerFired()  {
+    <span style="background-color: #FFFF00">rectX += 5;</span>
+  }</font></b></pre>
+            <pre><b><font color="#000080">  public void paint(Graphics2D page) {
+    page.fillRect(<span style="background-color: #FFFF00">rectX</span>, 50, 50, 50);
+  }</font></b></pre>
+            <pre><b><font color="#000080">  // Standard main method:
+  public static void main(String[] args) { launch(500, 400); }
+}</font></b></pre>
+        </li>
+        <li><b><a name="Smoother_Animation">Smoother Animation</a> (with
+            setTimerDelay in start method)</b><pre><b><font color="#800000">  // Add this method to your Animation program
+  <span style="background-color: #FFFF00">// This method is called exactly once at the start of the program.</span>
+  <span style="background-color: #FFFF00">public void start()</span> {
+    int delayInMilliseconds = 1;
+    <span style="background-color: #FFFF00">setTimerDelay(delayInMilliseconds)</span>;
+  }</font></b></pre>
+        </li>
+    </ol>
+    </li>
+    <li><b><a name="mousePressed_Events">mousePressed Events</a></b><pre><font color="#000080"><b>// MousePressedDemo.java
+// Demonstrates the mousePressed event in JComponentWithEvents.</b></font></pre>
+        <pre><font color="#000080"><b>import javax.swing.*;
+import java.awt.*;</b></font></pre>
+        <pre><font color="#000080"><b>class MousePressedDemo extends JComponentWithEvents {</b></font></pre>
+        <pre><font color="#000080"><b>  // these instance variables persists between method calls!
+  private int rectX = 50;
+  private int rectY = 50;</b></font></pre>
+        <pre><font color="#000080"><b>  <span style="background-color: #FFFF00">// This method is called each time the mouse is pressed.</span>
+  <span style="background-color: #FFFF00">// The parameters contain the (x,y) location of the mouse press.</span>
+  <span style="background-color: #FFFF00">public void mousePressed(int x, int y)</span> {
+    rectX = x;
+    rectY = y;
+  }</b></font></pre>
+        <pre><font color="#000080"><b>  public void paint(Graphics2D page) {
+    page.fillRect(rectX, rectY, 50, 50);
+  }</b></font></pre>
+        <pre><font color="#000080"><b>  // Standard main method:
+  public static void main(String[] args) { launch(500, 400); }
+}</b></font></pre>
+    </li>
+    <li><b><a name="keyPressed_Events">keyPressed Events</a></b><pre><font color="#800000"><b>// KeyPressedDemo.java
+// Demonstrates the mousePressed event in JComponentWithEvents.</b></font></pre>
+        <pre><font color="#800000"><b>import javax.swing.*;
+import java.awt.*;</b></font></pre>
+        <pre><font color="#800000"><b>class KeyPressedDemo extends JComponentWithEvents {</b></font></pre>
+        <pre><font color="#800000"><b>  // these instance variables persists between method calls!
+  private int rectX = 50;
+  private int rectY = 50;</b></font></pre>
+        <pre><font color="#800000"><b>  <span style="background-color: #FFFF00">// This method is called each time a key is pressed.</span>
+  <span style="background-color: #FFFF00">// The parameter contains the key that was pressed.</span>
+  <span style="background-color: #FFFF00">// Note that you can use the constants UP, DOWN, LEFT, and RIGHT</span>
+  <span style="background-color: #FFFF00">// to represent the arrow keys.</span>
+  <span style="background-color: #FFFF00">public void keyPressed(char key)</span> {
+    if (key == RIGHT)
+      rectX += 10;
+    else if (key == 'l')
+      // We'll take 'l' to mean "left" edge of the window
+      rectX = 0;
+  }</b></font></pre>
+        <pre><font color="#800000"><b>  public void paint(Graphics2D page) {
+    page.fillRect(rectX, rectY, 50, 50);
+  }</b></font></pre>
+        <pre><font color="#800000"><b>  // Standard main method:
+  public static void main(String[] args) { launch(500, 400); }
+}</b></font></pre>
+    </li>
+    <li><b><a name="Helpful_Patterns">Helpful Patterns</a></b><br>
+        &nbsp;<ol type="a">
+            <li><b><a name="Pausing">Pausing</a></b><pre><font color="#000080"><b>// This demo shows how to pause and unpause an
+// animation using the 'p' key
+
+import javax.swing.*;
+import java.awt.*;
+
+class PausingDemo extends JComponentWithEvents {
+
+  private boolean isPaused = false;
+  private int counter = 0;
+
+  public void timerFired() {
+    <span style="background-color: #FFFF00">if (isPaused == true)</span>
+    <span style="background-color: #FFFF00">  // if we are paused, do nothing, just return immediately!
+</span>    <span style="background-color: #FFFF00">  return;
+</span>    beep();
+    counter++;
+  }
+
+  public void keyPressed(char key) {
+    <span style="background-color: #FFFF00">if (key == 'p')
+</span>    <span style="background-color: #FFFF00">  // turn on or off pausing with the 'p' key
+</span>    <span style="background-color: #FFFF00">  isPaused = !isPaused;
+</span>  }
+
+  public void paint(Graphics2D page) {
+    page.setFont(new Font("Arial", Font.BOLD, 16));
+    page.drawString("Pause/unpause beeping with 'p' key", 50, 50);
+    page.drawString("Calls to timerFired: " + counter, 50, 100);
+  }
+
+  public static void main(String[] args) { launch(400, 150);}
+}</b></font></pre>
+            </li>
+            <li><b><a name="Simulating_TimerFired_events_While_Paused">Simulating
+                TimerFired Events While Paused</a></b><pre><b><font color="#800000">// This demo shows how to simulate timer events
+// using the 't' key while an animation is paused
+// (using the 'p' key to pause and unpause).
+// This is VERY helpful for debugging!
+
+// To fully understand this code, compare it to the
+// previous example.  In particular, be sure to understand
+// why we wrote the onTimerFired helper method.
+
+import javax.swing.*;
+import java.awt.*;
+
+class SimulatedTimerEventsDemo extends JComponentWithEvents {
+
+  private boolean isPaused = false;
+  private int counter = 0;
+
+  <span style="background-color: #FFFF00">// This helper method is called by timerFired when it is not
+</span>  <span style="background-color: #FFFF00">// paused, and also by keyPressed to simulate a timerEvent.
+</span>  <span style="background-color: #FFFF00">public void onTimerFired() {</span>
+    beep();
+    counter++;
+  }
+
+  public void timerFired() {
+    if (isPaused == true)
+      // if we are paused, do nothing, just return immediately!
+      return;
+    <span style="background-color: #FFFF00">onTimerFired();</span>
+  }
+
+  public void keyPressed(char key) {
+    if (key == 'p')
+      // turn on or off pausing with the 'p' key
+      isPaused = !isPaused;
+    <span style="background-color: #FFFF00">else if (key == 't')</span>
+      <span style="background-color: #FFFF00">// simulate a timer fired event when user presses 't'</span>
+      <span style="background-color: #FFFF00">onTimerFired();</span>
+  }
+
+  public void paint(Graphics2D page) {
+    page.setFont(new Font("Arial", Font.BOLD, 16));
+    page.drawString("Pause/unpause beeping with 'p' key", 50, 50);
+    page.drawString("Paused = " + isPaused, 50, 100);
+    page.drawString("Calls to timerFired: " + counter, 50, 150);
+  }
+
+  public static void main(String[] args) { launch(400, 200);}
+}</font></b></pre>
+            </li>
+        </ol></li>
+    <li><b><a name="Unhelpful_Anti-Patterns">Unhelpful Anti-Patterns</a><br>
+        &nbsp;</b><ol type="a">
+        <li><b><a name="Do_Not_Set_Instance_Variables_in_Paint_Methods!">Do Not Set
+            Instance Variables in Paint Methods!</a><br>
+            <br>
+            This Program:</b><pre><b><font color="#800000">import javax.swing.*;
+import java.awt.*;
+
+class MyGraphics extends JComponentWithEvents {
+
+  private int rectX = 0;
+
+  public void timerFired() {
+    rectX += 30;
+  }
+
+  public void paint(Graphics2D page) {
+    <span style="background-color: #FFFF00">// This is meant to "wraparound" the rectangle.
+</span>    <span style="background-color: #FFFF00">// The code is correct, but it's in the wrong place.</span>
+    <span style="background-color: #FFFF00">// It belongs in the timerFired method, not here!!!</span>
+    if (rectX &gt; getWidth()-200)
+      <span style="background-color: #00FFFF">rectX = 0;</span>  <span style="background-color: #FFFF00">// this line, in particular, is the problem!</span>
+    page.fillRect(rectX, 50, 200, 50);
+  }
+
+  public static void main(String[] args) { launch(500, 300);}
+}</font></b></pre>
+            <p><b>Works briefly, then generates this output:<br>
+                <img border="0" src="pix/fieldChangeInPaintError.jpg" width="296" height="133"><br>
+                <br>
+                Rules:<br>
+                &nbsp; * Paint methods only GET instance variables.<br>
+                &nbsp; * Event handlers (timerFired, keyPressed, mousePressed) can GET OR SET
+                instance variables.<br>
+                &nbsp;</b></p></li>
+    </ol></li>
+    <li><b><a name="Practice">Practice</a><br>See
+        <a href="events/EventsPractice.html">EventsPractice.html</a><br>&nbsp;</b></li>
+    <li><b><a name="Coming_soon...">Coming soon...</a></b><br><b>
+        <a href="http://www.kosbie.net/cmu/JComponentWithEvents/v4/EventsDemoApplet/EventsDemo.html">EventsDemo.html</a></b><br>
+        &nbsp;</li>
+</ol>
