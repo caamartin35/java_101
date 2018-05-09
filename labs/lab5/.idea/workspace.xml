@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lab5.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Lab5.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lab5.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="68" column="63" lean-forward="true" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
+            <state relative-caret-position="187">
+              <caret line="67" column="78" lean-forward="true" selection-start-line="67" selection-start-column="78" selection-end-line="67" selection-end-column="78" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#span#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#li#1;n#ol#0;n#!!top" expanded="true" />
@@ -177,7 +177,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lab5.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Lab5.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Lab5.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -217,6 +217,11 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>hw5</find>
+    </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -301,8 +306,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.Lab5Animation.jar">
-    <configuration name="Lab4" type="Application" factoryName="Application">
+  <component name="RunManager">
+    <configuration name="Lab5" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.Lab5" />
       <module name="lab5" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -327,15 +332,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="Lab4AnimationDemo.jar" type="JarApplication" factoryName="JAR Application">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/Lab4AnimationDemo.jar" />
-    </configuration>
-    <configuration name="Lab4InvadersDemo.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/Lab4InvadersDemo.jar" />
-    </configuration>
-    <configuration name="Lab5Animation.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/Lab5Animation.jar" />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -358,18 +354,6 @@
       <properties />
       <listeners />
     </configuration>
-    <list>
-      <item itemvalue="Application.Lab4" />
-      <item itemvalue="JAR Application.Lab4AnimationDemo.jar" />
-      <item itemvalue="JAR Application.Lab4InvadersDemo.jar" />
-      <item itemvalue="JAR Application.Lab5Animation.jar" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JAR Application.Lab5Animation.jar" />
-        <item itemvalue="JAR Application.Lab4InvadersDemo.jar" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -864,30 +848,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Lab5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-          <folding>
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#1653#1654#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
-            <element signature="e#2634#2635#0" expanded="true" />
-            <element signature="e#2661#2662#0" expanded="true" />
-            <element signature="e#3850#3851#0" expanded="true" />
-            <element signature="e#3877#3878#0" expanded="true" />
-            <element signature="e#5876#5877#0" expanded="true" />
-            <element signature="e#5901#5902#0" expanded="true" />
-            <element signature="e#7795#7796#0" expanded="true" />
-            <element signature="e#7820#7821#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lab5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="68" column="63" lean-forward="true" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
+        <state relative-caret-position="187">
+          <caret line="67" column="78" lean-forward="true" selection-start-line="67" selection-start-column="78" selection-end-line="67" selection-end-column="78" />
           <folding>
             <element signature="n#style#0;n#span#0;n#span#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#li#1;n#ol#0;n#!!top" expanded="true" />
@@ -935,6 +899,26 @@
             <element signature="n#style#0;n#span#0;n#a#0;n#b#0;n#li#4;n#ol#0;n#!!top" expanded="true" />
             <element signature="e#26332#26375#0" expanded="true" />
             <element signature="n#style#0;n#span#0;n#a#0;n#b#0;n#li#6;n#ol#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Lab5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#1653#1654#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="e#2634#2635#0" expanded="true" />
+            <element signature="e#2661#2662#0" expanded="true" />
+            <element signature="e#3850#3851#0" expanded="true" />
+            <element signature="e#3877#3878#0" expanded="true" />
+            <element signature="e#5876#5877#0" expanded="true" />
+            <element signature="e#5901#5902#0" expanded="true" />
+            <element signature="e#7795#7796#0" expanded="true" />
+            <element signature="e#7820#7821#0" expanded="true" />
           </folding>
         </state>
       </provider>
