@@ -1,0 +1,452 @@
+You can consult scannerDocs.html to help using the scanner to take input from a file and input from the console.
+<ol>
+    <li><b><a name="count">count</a><br>
+    </b>In the file Lab5.java write the method:<b><br>
+        </b><span style="">
+	<span style="font-size: 10pt; font-family: &quot;Courier New&quot;; color: maroon;">
+	&nbsp;&nbsp; public static int count(int[] a, int x)<br>
+	</span></span>This method takes an int array "a" and an int "x", and returns
+        the number of times the value "x" occurs in the array "a". The method
+        returns 0 if "x" does not occur, or if "a" is null.<br>
+        &nbsp;</li>
+    <li><b><a name="hasDuplicates">hasDuplicates</a></b><br>
+        In the file Lab5.java, write the method:<b><br>
+        </b><span style="font-size: 10pt; font-family: Courier New; color: maroon">
+	&nbsp;&nbsp; public static boolean hasDuplicates(int[] a)<br>
+	</span>This method takes an int array "a" and returns true if that array
+        contains any duplicates -- that is, if any numbers occur more than once in
+        the array -- and false otherwise. The method returns false if "a" is null.<br>
+        Note that you do not have to be especially efficient in your solution here.
+        For example, it is acceptable to solve this using the "count" method you
+        just wrote in some reasonably straightforward manner, even though that may not
+        be the most efficient approach.<br>
+        &nbsp;</li>
+    <li><b><a name="removeOdds">removeOdds</a><br></b>In the file Lab5.java, write the method:<b><br>
+    </b><span style="font-size: 10pt; font-family: Courier New; color: maroon">
+	&nbsp;&nbsp; public static int[] removeOdds(int[] a)<br>
+	</span>This method takes an int array "a" and returns a new int array that
+        is the same as "a" but with all the odd values removed, and all the even
+        values occurring in the same order. If "a" is null, the method returns null.<br>
+        Hint: you may want to use a helper method named "countOdds".<br>&nbsp;</li>
+    <li><b><a name="reverse">reverse</a><br>
+    </b>In the file Lab5.java, write the method:<b><br>
+    </b><span style="font-size: 10pt; font-family: Courier New; color: maroon">
+	&nbsp;&nbsp; public static int[] reverse(int[] a)<br>
+	</span>This method takes an int array "a" and returns a new int array that
+        is the same as "a" but with all the values in reverse order. Note:&nbsp; in this method, if "a" is null, the method returns an empty array
+        (a <i>non-null</i> array of size zero) rather than a null array (this is
+        less common, but not unheard of, and you should be able to implement and/or
+        use methods using either approach).<br>
+        &nbsp;</li>
+    <li><b><a name="sumOfDiceOdds">sumOfDiceOdds</a></b><br>
+        In the file Lab5.java, write the method:<b><br>
+        </b><span style="font-size: 10pt; font-family: Courier New; color: maroon">
+	&nbsp;&nbsp; public static double sumOfDiceOdds(int dice, int targetSum)<br>
+	</span>This method basically confirms the data in this table:&nbsp;
+        <a href="http://wizardofodds.com/gambling/dice2.html">
+            http://wizardofodds.com/gambling/dice2.html</a>.&nbsp; That table gives the
+        odds of a given sum when rolling various numbers of 6-sided dice.<br>
+        <br>
+        Specifically, this method takes two parameters -- the number of 6-sided dice
+        and the desired sum -- and it returns as a double value the probability of
+        rolling that sum with that many dice. The method does this using Monte Carlo
+        methods, using 1 million trials where each trial consists of rolling the
+        given number of 6-sided dice one time and succeeding if they produce the
+        given sum.<br>
+        <br>
+        Note: Our test method's version of almostEqual (to compare your results
+        against the expected results) will use a "large" epsilon of 0.001 since
+        Monte Carlo methods are only approximate, and with only one million trials,
+        we will not get very precise results.<br>
+        <br>
+        Also note:&nbsp; given the nature of Monte Carlo methods, there is some
+        small (perhaps <i>very small</i>) chance that your code would "work" and yet
+        occasionally fail a test.&nbsp; So, if your code "almost always" passes the
+        tests, then consider it correct!<br>
+        &nbsp;</li>
+    <li><b><a name="Array-based_Animation">Array-based Animation</a><br></b>In
+        the file Lab5Animation.java (which is not provided for you), write the
+        simple array-based animation found in Lab5Animation.jar
+        Run the demo program (Lab5Animation.jar), which shows
+        how this program should work once it is completed.<br>
+        Hint:&nbsp; the x coordinates of the balls should probably be stored in an
+        instance variable as an array of int's.<br>
+        Hint:&nbsp; the y coordinates of the balls do not need to be stored at all
+        -- they can be computed in paint based on the number of balls and the height
+        of the window.<br>
+        Have fun!!!</li><br><br><br>
+    <li><b><a name="Beijing_Olympics_Winner_(Read_from_File)">Beijing Olympics Winner (Read from File)</a><br></b>For this problem, you will analyze data from the Beijing 2008 Olympics
+        by reading it from a file.&nbsp; The file beijingOlympics.txt
+        contains a comma-separated list of each country that won at least one medal
+        in these Olympics, and the number of gold, silver, and bronze medals they
+        received, as such:<br>&nbsp;<table x:str="" border="0" cellpadding="0" cellspacing="0" width="320" style="border-collapse:
+ collapse;width:240pt" id="table1">
+            <colgroup><col width="64" span="5" style="width:48pt">
+            </colgroup>
+            <tbody><tr height="17" style="height:12.75pt">
+                <td height="17" style="height: 12.75pt; width: 77px; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">Country</td>
+                <td style="width: 47px; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">Gold</td>
+                <td width="64" style="width: 48pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">Silver</td>
+                <td width="64" style="width: 48pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">Bronze</td>
+                <td width="64" style="width: 48pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">Total</td>
+            </tr>
+            <tr height="17" style="height:12.75pt">
+                <td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="77">China</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="47">51</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">21</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">28</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">100</td>
+            </tr>
+            <tr height="17" style="height:12.75pt">
+                <td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="77">USA</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="47">36</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">38</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">36</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">110</td>
+            </tr>
+            <tr height="17" style="height:12.75pt">
+                <td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="77">Russian Fed.</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="47">23</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">21</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">28</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">72</td>
+            </tr>
+            <tr height="17" style="height:12.75pt">
+                <td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="77">Great Britain</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="47">19</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">13</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">15</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">47</td>
+            </tr>
+            <tr height="17" style="height:12.75pt">
+                <td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="77">...</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="47">...</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">...</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">...</td>
+                <td align="right" x:num="" style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">...</td>
+            </tr>
+            </tbody></table>
+        <p>The question we will be addressing is:&nbsp; which country won overall?&nbsp;
+            This depends on how you <i>weight</i> the gold, silver, and bronze medals.&nbsp;
+            For example, if you only count gold medals (give them a weight of 1 each,
+            with silvers and bronzes weighted 0 each), then China clearly won.&nbsp; But
+            if you weight each medal equally (all with a weight of 1, say), then the
+            United States (USA in the chart) won.&nbsp; There are other weightings, too,
+            of course.&nbsp; For example, if you think gold medals and silver medals are
+            each worth 1, but bronze medals are worth -3 (peculiar, yes, but also quite
+            legal), then there turns out to be a 3-way tie between the Czech Republic,
+            Poland, and Spain (all with 6 total points by those weights).<b><br><br></b>
+            Based on this description, write a method, beijingOlympicsWinner, that takes 3 (possibly-negative,
+            possibly-zero) integers, the weightings for gold, silver, and bronze medals
+            (in that order), and a fourth parameter -- a String containing the path to
+            the data file -- and returns a string containing the name of the overall
+            winning country (exactly as the name appears in the first column).&nbsp; If
+            there is a tie, then return all the winning country names in a single
+            string, separated by vertical bars ("|"), ordered in the same order they
+            appear in the file.&nbsp; So, with the weightings of 1, 1, and -3 from
+            above, you would return "Spain|Poland|Czech Republic" (as they appear in
+            that order when listed by total medals, which is how the file is arranged).<br>
+           </p></li>
+    <li><b><a name="Number_Guessing_Game">Number Guessing Game</a> (Binary
+        Search) (Read from Console)<br>
+    </b>Write the following method:<br>
+        <b><font color="#800000" face="Courier New" size="2">&nbsp;&nbsp; public static void
+            numberGuessingGame()</font></b><br>
+        This method takes <i>no parameters</i> and plays the number guessing game,
+        where the user thinks of a number between 0 and 1000 and the computer
+        guesses it.&nbsp; The user repeatedly instructs the computer if the guess is too
+        low, correct, or too high, and the computer continues guessing until it gets
+        the right answer.&nbsp; Each guess must be exactly halfway between the known
+        limits.&nbsp; Here is <i>exactly</i> what your method's output should look like
+        (with user input underlined, and in this case the user thought of the number
+        374):<br>
+        <br>
+        <font color="#000080" face="Courier New" size="2">Think of a number between
+            0 and 1000.<br>
+            Your number is between 0 and 1000.<br>
+            I guess: 500<br>
+            Is this correct? (y/n) <u>n</u><br>
+            Is 500 too high? (y/n) <u>y</u><br>
+            Your number is between 0 and 499.<br>
+            I guess: 249<br>
+            Is this correct? (y/n) <u>n</u><br>
+            Is 249 too high? (y/n) <u>n</u><br>
+            Your number is between 250 and 499.<br>
+            I guess: 374<br>
+            Is this correct? (y/n) <u>y</u><br>
+            I got it in 3 guesses!</font><br>
+        <br>
+        Let's take a closer look at this.&nbsp; At first, the number is in the range [0,
+        1000], so the guess is 500 (midway).&nbsp; The user indicates that this is
+        incorrect, and further that it is too high.&nbsp; Since 500 is too high, we now
+        know that 499 is the highest possible answer, so the number is in the range
+        [0, 499].&nbsp; The guess should be the average of these two numbers, which is
+        249.5, but we're dealing with integers only here, so we truncate to 249.&nbsp;
+        The user indicates that this is too low, so the lowest possible answer is
+        now 250, so the range is now [250, 499].&nbsp; The average of these (with
+        truncation) is 374, and that is our new guess.&nbsp; The user indicates that we
+        are correct, so we print out our total guess count and return.&nbsp; If the
+        program gets to the point that no more guesses are possible (because the
+        user either picked a number out of the legal range or otherwise made a
+        mistake), it should print out "Impossible!" and return.&nbsp; Also, if the
+        program gets it on the first guess (how lucky!), it should print out "I got
+        it in 1 guess!" (notice it prints "guess" and not "guesses" in this case).<br>
+        <br></p></li>
+    <li><b><a name="Counting_Primes">Counting Primes</a><br>
+    </b>In this exercise, we will observe an amazing property of the prime
+        numbers!<br>
+        &nbsp;<ol>
+            <li type="a"><b>The Prime Counting Function:&nbsp; pi(n)<br>
+            </b>Write the following method:<br>
+                <b><font color="#800000" face="Courier New" size="2">&nbsp; public static int
+                    pi(int n)</font></b><br>
+                This method (which has nothing much to do with the value "pi", but
+                coincidentally shares its name) takes an integer n and returns the
+                number of prime numbers less than or equal to n.&nbsp; Here a test method:<pre><font color="#800000"><b>  public static void testPi() {
+    System.out.print("Testing pi... ");
+    assert(pi(1) == 0);
+    assert(pi(2) == 1);
+    assert(pi(3) == 2);
+    assert(pi(4) == 2);
+    assert(pi(5) == 3);
+    assert(pi(100) == 25);  // there are 25 primes in the range [2,100]
+    System.out.println("Passed all tests!");
+  }</b></font></pre>
+            </li>
+            <li type="a"><b>The Harmonic Number:&nbsp; h(n)<br>
+            </b>Write the following method:<br>
+                <font color="#800000" face="Courier New" size="2"><b>&nbsp; public static
+                    double h(int n)</b><br>
+                </font>This method returns the sum of the first n terms in the harmonic
+                series:&nbsp; 1/1 + 1/2 + 1/3 + 1/4 + ...&nbsp; If n is non-positive, the method
+                returns 0.&nbsp; Here is a test method:<pre><font color="#800000"><b>  public static void testH() {
+    System.out.print("Testing H... ");
+    assert(almostEqual(h(0),0.0));
+    assert(almostEqual(h(1),1/1.0                )); // h(1) = 1/1
+    assert(almostEqual(h(2),1/1.0 + 1/2.0        )); // h(2) = 1/1 + 1/2
+    assert(almostEqual(h(3),1/1.0 + 1/2.0 + 1/3.0)); // h(3) = 1/1 + 1/2 + 1/3
+    System.out.println("Passed all tests!");
+  }</b></font></pre>
+                <p><b>Note</b>:&nbsp; here we use "almostEqual" rather than "==" because this
+                    method returns a double.<br>
+                    &nbsp; </p></li>
+            <li type="a"><b>Using the Harmonic Number to estimate the Prime Counting
+                Function (Wow!)<br>
+                <br>
+            </b>Write the following method:<br>
+                <font color="#800000" face="Courier New" size="2"><b>&nbsp; public static int
+                    estimatedPi(int n)</b></font><br>
+                This method uses the Harmonic Number function h(n) to <i>estimate</i>
+                the Prime Counting Function pi(n).&nbsp; Think about it.&nbsp; One counts the
+                number of primes.&nbsp; The other adds the reciprocals of the integers.&nbsp; They
+                seem totally unrelated, but they are in fact very deeply related!&nbsp; In
+                any case, this method takes an integer n and if it is greater than 2,&nbsp;
+                returns the value (n / (h(n) - 1.5) ), rounded to the nearest integer
+                (and then cast to an int).&nbsp; If n is 2 or less, the method returns 0.&nbsp;
+                Here is the start of a test method:<pre><font color="#800000"><b>  public static void testEstimatedPi() {
+    System.out.print("Testing estimatedPi... ");
+    assert(estimatedPi(100) == 27);
+    assert(estimatedPi(200) == 46);
+    assert(estimatedPi(300) == 63);
+    System.out.println("Passed all tests!");
+  }</b></font></pre>
+            </li>
+            <li type="a"><b>Empirical check that this really works:&nbsp;
+                estimatedPiError<br>
+                <br>
+            </b>Write the following method:<br>
+                <font color="#800000" face="Courier New" size="2"><b>&nbsp; public static int
+                    estimatedPiError(int n)</b><br>
+                </font>This method takes an integer n and returns the absolute value of
+                the difference between the value of our estimation computed by
+                estimatedPi(n) and the actual number of primes less than or equal to n
+                as computed by pi(n).&nbsp; If n is 2 or less, then method returns 0.&nbsp; Here
+                is the start of a test method:<pre><font color="#800000"><b>  public static void testEstimatedPiError() {
+    System.out.print("Testing estimatedPiError... ");
+    assert(estimatedPiError(100) == 2); // pi(100) = 25, estimatedPi(100) = 27
+    assert(estimatedPiError(200) == 0); // pi(200) = 46, estimatedPi(200) = 46
+    assert(estimatedPiError(300) == 1); // pi(300) = 62, estimatedPi(300) = 63
+    assert(estimatedPiError(400) == 1); // pi(400) = 78, estimatedPi(400) = 79
+    assert(estimatedPiError(500) == 1); // pi(500) = 95, estimatedPi(500) = 94
+    System.out.println("Passed all tests!");
+  }</b></font></pre>
+                <p><b>Aside</b>:&nbsp; as you can see, the estimatedPi function is an <i>
+                    amazingly accurate</i> estimation of the pi function.&nbsp; For example, the
+                    estimatedPi function predicts that there should be 94 prime numbers up
+                    to 500, and in fact there are 95 prime numbers in that range.&nbsp; And so we
+                    must conclude that there is some kind of <i>very deep relationship</i>
+                    between the sum of the reciprocals of the integers (1/1 + 1/2 + ...) and
+                    the number of prime numbers.&nbsp; This relationship has been explored in
+                    great detail by many mathematicians over the past few hundred years,
+                    with some of the most important results in modern mathematics relating
+                    to it.<br>
+                    &nbsp;</p></li>
+        </ol>
+    </li>
+    <li><b><a name="Bonus:_Keplers_Polygons">
+        <span style="background-color: #FFFF00">Bonus:</span> Kepler's Polygons</a><br>
+    </b>Among his lesser-known exploits, the great German mathematician and
+        astronomer Johannes Kepler studied how polygons can tile the plane or
+        portions of the plane.&nbsp; For a fair bit of bonus, in a file named
+        Lab5BonusKeplerPolygon.java, paint any of the following figure of Kepler's:<br>
+        <br>
+        <img border="0" src="pix/keplerPolygons.gif" width="410" height="360"><br>
+        <br>Do not be put off by the apparent complexity.&nbsp; Yes, it requires a
+        clever combination of loops and trigonometry (sine and cosine), but you can
+        do this!&nbsp; At least you can do it well enough to get a fair bit of bonus
+        for your effort.&nbsp; Give it a try!!!!<br>
+        <br>Enjoy!!!<br>
+        &nbsp;</li>
+    <li><b><a name="Bonus/Optional:&nbsp;_Finite_State_Machines,_part_1">
+        <span style="background-color: rgb(255, 255, 0);">Bonus/Optional</span>:&nbsp;
+        Finite State Machines, part 1</a><br>
+        <br>
+    </b><i>Note:&nbsp; this problem has an unusually verbose description, but rest
+        assured it is no more difficult than the preceding problems.&nbsp; Finite State
+        Machines play an important role in the theory of computation.<br>
+        <br>
+        Note:&nbsp; Place your solutions to this and the next bonus problems in the
+        file Lab5BonusFSM.java.</i><br>
+        <br>
+        For this problem, we will consider a <i>Finite State Machine</i>.&nbsp; This is a
+        very simple machine that has some <i>state</i>s, which are numbered and
+        which we will label with circles, and <i>transitions</i> between states,
+        which are labeled with a character (here, either '0' or '1').&nbsp; We begin in
+        the <i>start state</i>, and we start reading the characters in a string
+        (which must be made of only 0's and 1's).&nbsp; For each character, we move from
+        the current state to the next state along the appropriate transition of the
+        machine.&nbsp; At the end of the string, we say the machine <i>accepts </i>the
+        string if the machine ends up in an <i>accept state.&nbsp; </i>Here, we will
+        assume that there are no more than 10 states, labeled 0 through 9, with
+        state 0 as the start state, and with only one accept state.&nbsp; For example,
+        consider this machine:<br>
+        <img border="0" src="pix/fsm.gif" width="297" height="172"><br>
+        The machine has 4 states (0, 1, 2, and 3, written as q<sub>0</sub>, q<sub>1</sub>,
+        q<sub>2</sub>, q<sub>3</sub>).&nbsp; Its start state is q<sub>0</sub>.&nbsp; The
+        double-circled state is the accept state, which in this case also happens to
+        be q<sub>0 </sub>(though that is not always the case).<br>
+        <br>
+        Now, let's see this machine in action.&nbsp; If the input string is "01", the
+        machine starts in q<sub>0</sub>, follows the 0 to q<sub>1</sub>, then
+        follows the 1 back to q<sub>0</sub>.&nbsp; Since it ends in the accept state, we
+        say that the machine accepts the string "01"<br>
+        <br>
+        For another example, let's try "110".&nbsp; Here, the machine starts in q<sub>0</sub>,
+        and follows 1 to q<sub>2</sub>, then follows 1 to q<sub>3</sub>, then
+        follows 0 again to q<sub>3</sub>.&nbsp; Since it ends in a non-accept state, we
+        say that the machine does not accept the string "110".<br>
+        <br>
+        Now, for this problem we need to <i>encode</i> a finite state machine
+        (subject to our limitations of 10 states and only one accept state) in a
+        string.&nbsp; We will do this as follows:<br>
+        &nbsp; character 0:&nbsp; the accept state<br>
+        &nbsp; character 1:&nbsp; the transition from state 0 on input 0<br>
+        &nbsp; character 2:&nbsp; the transition from state 0 on input 1<br>
+        &nbsp; character 3:&nbsp; the transition from state 1 on input 0<br>
+        &nbsp; character 4:&nbsp; the transition from state 1 on input 1<br>
+        &nbsp; character 5:&nbsp; the transition from state 2 on input 0<br>
+        &nbsp; character 6:&nbsp; the transition from state 2 on input 1<br>
+        &nbsp; ...<br>
+        So, we would encode the machine from above as this string:<br>
+        "012300333"<br>
+        To be sure you understand this, here is some explanation<br>
+        &nbsp;&nbsp; character 0 (underlined here: "<u>0</u>12300333"): the accept state is 0<br>
+        &nbsp;&nbsp; character 1 (underlined here: "0<u>1</u>2300333"): state 0 on input 0
+        transitions to state <u>1</u><br>
+        &nbsp;&nbsp; character 2 (underlined here: "01<u>2</u>300333"): state 0 on input 1
+        transitions to state <u>2</u><br>
+        &nbsp;&nbsp; character 3 (underlined here: "012<u>3</u>00333"): state 1 on input 0
+        transitions to state <u>3</u><br>
+        &nbsp;&nbsp; character 4 (underlined here: "0123<u>0</u>0333"): state 1 on input 1
+        transitions to state <u>0</u><br>
+        &nbsp;&nbsp; ...<br>
+        <br>
+        Write this method:<br>
+        <b><font color="#800000" face="Courier New" size="2">&nbsp;&nbsp; public static int
+            nextState(String machine, int state, char transition)</font></b><br>
+        This method takes a machine description (like "012300333"), a current state
+        (from 0 to 9), and a character (either 0 or 1) indicating which transition
+        to take from the current state.&nbsp; The method returns the new state (an int
+        from 0 to 9) which results from taking the given transition using the given
+        machine specification.<br>
+        <br>
+        Then, write this method:<br>
+        <b><font color="#800000" face="Courier New" size="2">&nbsp; public static boolean
+            accepts(String machine, String input)</font></b><br>
+        This method takes a machine description and an input string (which is
+        guaranteed to be non-null and non-empty and containing only 1's or 0's), and
+        returns true if the machine ends in an accept state when run on the given
+        input string and false otherwise.<br>
+        Note:&nbsp; this method will call your nextState() method for each character in
+        the given input string.<br>
+        <br>
+        Here is the start of a test method:<i><br>
+        </i><font color="#800000" face="Courier New" size="2"><b>&nbsp; public static
+            void testAccepts() {<br>
+            &nbsp;&nbsp;&nbsp; assert(accepts("012300333","01") == true);<br>
+            &nbsp;&nbsp;&nbsp; assert(accepts("012300333","110") == false);<br>
+            &nbsp; }<br>
+        </b></font>You must also write a few more well-designed test cases.<font color="#800000" face="Courier New" size="2"><br>
+            &nbsp;<br>
+            &nbsp;</font></li>
+    <li><b><a name="Bonus/Optional:&nbsp;_Finite_State_Machines,_part_2">
+        <span style="background-color: rgb(255, 255, 0);">Bonus/Optional</span>:&nbsp;
+        Finite State Machines, part 2</a><br>
+        <br>
+    </b><i>Note:&nbsp; only attempt this question if you have completed Finite State
+        Machines, part 1.</i><b><br>
+        <br>
+    </b>Write this method:<br>
+        <b><font color="#800000" face="Courier New" size="2">&nbsp;&nbsp; public static String
+            toBinary(int n, int bits)</font></b><br>
+        This method takes a non-negative integer and a required number of bits and
+        returns a string of at least "bits" length representing that number in
+        binary (base 2), adding leading 0's as necessary.&nbsp; If the number is longer
+        than the given number of bits, it is not truncated but no leading 0's are
+        added.&nbsp; If the first parameter is negative, the method returns null.<br>
+        <br>
+        Note:&nbsp; while there are other ways to solve this, here you must work as
+        follows:<br>
+        Start with your result string equal to "".<br>
+        If n is zero, just set the result to "0".&nbsp; Otherwise, while the number n &gt;
+        0, extract the rightmost bit of n by taking the number n % 2, and add this
+        on to the appropriate side of the result string, then divide the number n by
+        2 to shift it in binary one digit to the right.&nbsp; Keep doing this until n is
+        0.<br>
+        Finally, add as many leading 0's as necessary.<br>
+        <br>
+        Here is the start of a test method:<i><br>
+        </i><font color="#800000" face="Courier New" size="2"><b>&nbsp; public static
+            void testToBinary() {<br>
+            &nbsp;&nbsp;&nbsp; assert(toBinary(5,6).equals("000101")); // Convert 5 to 6-bit binary<br>
+            &nbsp;&nbsp;&nbsp; assert(toBinary(5,2).equals("101"));&nbsp;&nbsp;&nbsp; // Convert 5 to 2-bit binary
+            (requires 3 bits)<br>
+            &nbsp;&nbsp;&nbsp; assert(toBinary(-5,2) == null);<br>
+            &nbsp; }</b><br>
+        </font><br>
+        That was just the prelude.&nbsp; Now to the main act.&nbsp; Write this method:<br>
+        <b><font color="#800000" face="Courier New" size="2">&nbsp;&nbsp; public static void
+            printLanguage(String machine, int maxDigits)</font></b><br>
+        This method combines your previous two answers as such:&nbsp; it takes an FSM
+        specification and a maximum number of digits.&nbsp; Then it generates every
+        possible input using maxDigits or fewer, and prints out all the input
+        strings that the FSM accepts in that range.&nbsp; To do this, the program runs a
+        counter from 0 to (2<sup>maxDigits</sup>-1), and converts these values using
+        the toBinary() method from above, then submits those strings to the accept()
+        method from above.&nbsp; It prints out just those strings that are accepted.<br>
+        <br>
+        <b>Note</b>:&nbsp; this method must print out to <i>both</i> the console <i>and
+            the file out.txt</i>!<br>
+        <br>
+        <b>Hint</b>:&nbsp; You do not have to compute the upper bound of (2<sup>maxDigits</sup>-1).&nbsp;
+        Instead, you can just keep increasing your counter forever, but break out of
+        your loop when toBinary() returns a string that is too long.<br>
+        <font color="#800000" face="Courier New" size="2"><br>
+        </font>Finally, write a test method as such:
+        <font color="#800000" face="Courier New" size="2"><br>
+            <b>&nbsp;&nbsp; public static void testPrintLanguage()<br>
+            </b></font>Testing this method can be tricky, seeing as it is a "void".&nbsp; But
+        we also save the output to the file "out.txt".&nbsp; So your test method should
+        run printLanguage, read in the file "out.txt", and compare its contents to a
+        known result.</li>
+</ol>

@@ -1,0 +1,367 @@
+<body marginwidth="5"><p><b>Computer Science 15-110, Fall 2009<br>
+    Class Notes:&nbsp; Scanner methods and Console UI</b></p>
+<hr>
+<ol>
+    <li><b><a href="#Console_Input">Console Input</a></b><ol type="a">
+        <li><b><a href="#Read_a_value">Read a value</a></b></li>
+        <li><b><a href="#Read_different_types">Read different types</a></b><ol>
+            <li><b><a href="#Read_a_double_value">Read a double value</a></b></li>
+            <li><b><a href="#Read_a_String_value">Read a String value</a></b></li>
+        </ol>
+        </li>
+        <li><b><a href="#Read_until_a_sentinel">Read until a sentinel</a></b></li>
+    </ol>
+    </li>
+    <li><b><a href="#Console_User_Interface_(UI)">Console User Interface (UI)</a></b><ol type="a">
+        <li><b><a href="#Use_a_prompt_for_input">Use a prompt for input</a></b></li>
+        <li><b><a href="#Print_clear_and_informative_output">Print clear and informative output</a></b></li>
+        <li><b><a href="#Handle_predictable_errors">Handle predictable errors</a></b></li>
+    </ol></li>
+    <li><b><a href="#Other_Input_Sources">Other Input Sources</a></b><ol type="a">
+        <li><b><a href="#Read_from_a_String">Read from a String</a></b></li>
+        <li><b><a href="#Read_from_a_File">Read from a File</a></b><ol>
+            <li><b><a href="#Word-at-a-time_(excluding_whitespace)">
+                Word-at-a-time (excluding whitespace)</a></b></li>
+            <li><b><a href="#Line-at-a-time_(including_whitespace)">
+                Line-at-a-time (including whitespace)</a></b></li>
+        </ol></li>
+        <li><b><a href="#(And_Write_to_a_File)">(And Write to a File)</a></b></li>
+        <li><b><a href="#Read_from_a_Web_Page">Read from a Web Page</a></b></li>
+    </ol></li>
+</ol>
+<hr>
+<p><span style="background-color: #66FF66"><b>Scanner Methods and Console UI</b></span></p>
+<ol>
+    <li><b><a name="Console_Input">Console Input</a><br>
+        &nbsp;</b><ol type="a">
+        <li><b><a name="Read_a_value">Read a value</a></b><pre><font color="#800000"><b>// This programs reads an int value and prints it.
+<span style="background-color: #00FFFF">// For details, see <a href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Scanner.html">http://java.sun.com/j2se/1.5.0/docs/api/java/util/Scanner.html</a></span><span style="background-color: #FFFF00">
+import java.util.Scanner;</span>
+class MyCode {
+  public static void main(String[] args) {
+    <span style="background-color: #FFFF00">Scanner scanner = new Scanner(System.in);</span>
+    int x = <span style="background-color: #FFFF00">scanner.nextInt()</span>;
+    System.out.println(x);
+  }
+}</b></font></pre>
+            <p><b>Another Example:</b></p>
+            <pre><b><font color="#800000">// This programs reads two int values and prints their sum.
+import java.util.Scanner;
+class MyCode {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int x = scanner.nextInt();
+    int y = scanner.nextInt();
+    System.out.println(x+y);
+  }
+}</font></b></pre>
+        </li>
+        <li><b><a name="Read_different_types">Read different types</a></b><br>
+            &nbsp;<ol>
+                <li><b><a name="Read_a_double_value">Read a double value</a></b><pre><font color="#800000"><b>// This programs reads two double values and prints their sum.
+import java.util.Scanner;
+class MyCode {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    double x = <span style="background-color: #FFFF00">scanner.nextDouble()</span>;
+    double y = scanner.nextDouble();
+    System.out.println(x+y);
+  }
+}</b></font></pre>
+                </li>
+                <li><b><a name="Read_a_String_value0">Read a String value</a></b><pre><b><font color="#800000">// This programs reads two String values and prints their concatenation.
+import java.util.Scanner;
+class MyCode {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    String x = <span style="background-color: #FFFF00">scanner.next()</span>;  <span style="background-color: #FFFF00">// next(), not nextString()!</span>
+    String y = scanner.next();
+    System.out.println(x+y);
+  }
+}</font></b></pre>
+                </li>
+            </ol></li>
+        <li><b><a name="Read_until_a_sentinel">Read until a sentinel</a></b><pre><font color="#800000"><b>// This program reads int values until the sentinel -1,
+// and then prints out the sum (not including the sentinel!).
+import java.util.Scanner;
+class MyCode {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int sentinel = -1;
+    int sum = 0;
+    int x = scanner.nextInt();
+    <span style="background-color: #FFFF00">while (x != sentinel)</span> {
+      sum += x;
+      x = scanner.nextInt();
+    }
+    System.out.println(sum);
+  }
+}</b></font></pre>
+            <p><b>Or, more concisely (and without duplicate code):</b></p>
+            <pre><b><font color="#800000">// This program reads int values until the sentinel -1,
+// and then prints out the sum (not including the sentinel!).
+import java.util.Scanner;
+class MyCode {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int sentinel = -1;
+    int sum = 0;
+    int x;
+    <span style="background-color: #FFFF00">while ((x = scanner.nextInt()) != sentinel)</span>
+      sum += x;
+    System.out.println(sum);
+  }
+}</font></b></pre>
+        </li>
+    </ol>
+    </li>
+    <li><b><a name="Console_User_Interface_(UI)">Console User Interface (UI)</a><br>
+        &nbsp;</b><ol type="a">
+        <li><b><a name="Use_a_prompt_for_input">Use a prompt for input</a></b><pre><b><font color="#800000">// This programs reads two int values and prints their sum.
+import java.util.Scanner;
+class MyCode {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    <span style="background-color: #FFFF00">System.out.print("Enter an integer: ");</span>
+    int x = scanner.nextInt();
+    <span style="background-color: #FFFF00">System.out.print("Enter another integer: ");</span>
+    int y = scanner.nextInt();
+    System.out.println(x+y);
+  }
+}</font></b></pre>
+        </li>
+        <li><b><a name="Print_clear_and_informative_output">Print clear and informative output</a></b><pre><b><font color="#800000">// This programs reads two int values and prints their sum.
+import java.util.Scanner;
+class MyCode {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    <span style="background-color: #FFFF00">System.out.println("This program reads two values and prints their sum.");</span>
+    System.out.print("Enter an integer: ");
+    int x = scanner.nextInt();
+    System.out.print("Enter another integer: ");
+    int y = scanner.nextInt();
+    <span style="background-color: #FFFF00">System.out.println(x + " + " + y + " = " + (x+y));</span>
+  }
+}</font></b></pre>
+        </li>
+        <li><b><a name="Handle_predictable_errors">Handle predictable errors</a></b><pre><b><font color="#800000">// This programs reads two int values and prints their quotient.
+import java.util.Scanner;
+class MyCode {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("This program reads two values and prints their quotient.");
+    System.out.print("Enter the integer numerator: ");
+    int x = scanner.nextInt();
+    System.out.print("Enter the integer denominator: ");
+    int y = scanner.nextInt();
+    <span style="background-color: #FFFF00">if (y == 0)</span>
+      <span style="background-color: #FFFF00">System.out.println("Cannot divide by zero!");</span>
+    else
+      System.out.println(x + " / " + y + " = " + (x/y));
+  }
+}</font></b></pre>
+        </li>
+    </ol>
+    </li>
+    <li><b><a name="Other_Input_Sources">Other Input Sources</a><br>
+        &nbsp;</b><ol type="a">
+        <li><b><a name="Read_from_a_String">Read from a String</a></b><pre><font color="#800000"><b>import java.util.Scanner;
+class MyCode {
+  public static void main(String[] args) {
+    String s = "Douglas Noel Adams";
+    Scanner scanner = <span style="background-color: #FFFF00">new Scanner(s)</span>;
+    while (scanner.hasNext())
+      System.out.println(scanner.next());
+  }
+}</b></font></pre>
+            <p><b>Another example (with a custom delimiter):</b></p>
+            <pre><b><font color="#800000">import java.util.Scanner;
+class MyCode {
+  public static void main(String[] args) {
+    String s = "Rome,Paris,Peoria,London,Tokyo";
+    Scanner scanner = new Scanner(s);
+    <span style="background-color: #FFFF00">scanner.useDelimiter(",")</span>;
+    while (scanner.hasNext())
+      System.out.println(scanner.next());
+  }
+}</font></b></pre>
+        </li>
+        <li><b><a name="Read_from_a_File">Read from a File</a></b><br>
+            &nbsp;<ol>
+                <li><b><a name="Word-at-a-time_(excluding_whitespace)">Word-at-a-time
+                    (excluding whitespace)</a></b><pre><b><font color="#800000">import java.util.Scanner;
+class MyCode  {
+  public static void main(String[] args) {
+    Scanner scanner = <span style="background-color: #FFFF00">getFileScanner("<a href="SampleFile.txt">SampleFile.txt</a>")</span>;
+    while (scanner.hasNext())
+      System.out.println(scanner.next());
+  }
+</font><font color="#C0C0C0" style="font-size: 9pt">
+</font><font color="#808080" style="font-size: 9pt">  // Convenient helper method for reading from a file.
+  // Returns null if the file is not found (or for any other error).
+  // You are responsible for using this method, but not
+  // for writing it (neither on homeworks or tests)!
+</font><font color="#808080"><span style="font-size: 9pt">  public static Scanner getFileScanner(String filename) {
+    Scanner scanner = null;
+    try {
+      java.io.File file = new java.io.File(filename);
+      if (file.isAbsolute() == true) {
+        scanner = new Scanner(file);
+      }
+      else {
+        // treat relative files as resources so they work in jar files!
+        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+        java.io.InputStream is = loader.getResourceAsStream(filename);
+        scanner = new Scanner(new java.io.BufferedReader(
+                               new java.io.InputStreamReader(is)));
+      }
+    }
+    catch (Exception e) {
+      System.out.println("File not found");
+      return null;
+    }
+    return scanner;
+  }
+</span></font><font color="#800000">}</font></b></pre></li>
+                <li><b><a name="Line-at-a-time_(including_whitespace)">Line-at-a-time
+                    (including whitespace)</a></b><pre><font color="#800000"><b>import java.util.Scanner;
+class MyCode  {
+  public static void main(String[] args) {
+</b></font><b><font color="#800000">    Scanner scanner = <span style="background-color: #FFFF00">getFileScanner("<a href="SampleFile.txt">SampleFile.txt</a>")</span>;
+</font></b><font color="#800000"><b>    while (scanner.hasNext())
+      System.out.println(<span style="background-color: #FFFF00">scanner.nextLine()</span>);
+  }
+
+</b></font><b><font color="#808080" style="font-size: 9pt">  // Convenient helper method for reading from a file.
+  // Returns null if the file is not found (or for any other error).
+  // You are responsible for using this method, but not
+  // for writing it (neither on homeworks or tests)!
+</font><font color="#808080"><span style="font-size: 9pt">  public static Scanner getFileScanner(String filename) {
+    Scanner scanner = null;
+    try {
+      java.io.File file = new java.io.File(filename);
+      if (file.isAbsolute() == true) {
+        scanner = new Scanner(file);
+      }
+      else {
+        // treat relative files as resources so they work in jar files!
+        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+        java.io.InputStream is = loader.getResourceAsStream(filename);
+        scanner = new Scanner(new java.io.BufferedReader(
+                               new java.io.InputStreamReader(is)));
+      }
+    }
+    catch (Exception e) {
+      System.out.println("File not found");
+      return null;
+    }
+    return scanner;
+  }</span></font></b><font color="#800000"><b>
+}</b></font></pre></li>
+            </ol>
+        </li>
+        <li><b><a name="(And_Write_to_a_File)">(And Write to a File)</a></b><pre><b><font color="#800000"><span style="background-color: #FFFF00">import java.io.PrintStream;</span>
+class MyCode  {
+  public static void main(String[] args) {
+    <span style="background-color: #FFFF00">PrintStream out = getFilePrintStream("MyOutput.txt");</span>
+    out.println("This will output to the file 'MyOutput.txt'");
+  }
+
+</font><font color="#808080" style="font-size: 9pt">  // Convenient helper method for writing to a file.
+  // Returns null if the file cannot be opened (or for any other error).
+  // You are responsible for using this method, but not
+  // for writing it (neither on homeworks or tests)!
+  public static PrintStream getFilePrintStream(String filename) {
+    PrintStream out = null;
+    try { out = new PrintStream(new java.io.File(filename)); }
+    catch (Exception e) {
+      System.out.println("Error opening file " + filename);
+      return null;
+    }
+    return out;
+  }</font><font color="#800000">
+}</font></b></pre></li>
+        <li><b><a name="Read_from_a_Web_Page">Read from a Web Page</a><br>&nbsp;</b><ol>
+            <li><b>As HTML</b><pre><b><font color="#800000">import java.util.Scanner;
+class MyCode  {
+  public static void main(String[] args) {
+    String url = "<a href="http://kosbie.net/cmu/fall-08/15-100/handouts/parsely.html">http://kosbie.net/cmu/fall-08/15-100/handouts/parsely.html</a>";
+    Scanner scanner = <span style="background-color: #FFFF00">getUrlScanner(url)</span>;
+    while (scanner.hasNext())
+      System.out.println(scanner.nextLine());
+  }
+
+</font><font color="#808080" style="font-size: 9pt">  // Convenient helper method for reading from a web page (url).
+  // Returns null if the page cannot be opened (or for any other error).
+  // You are responsible for using this method, but not
+  // for writing it (neither on homeworks or tests)!
+  public static Scanner getUrlScanner(String url) {
+    Scanner scanner = null;
+    try { scanner = new Scanner(new java.net.URL(url).openStream()); }
+    catch (Exception e) {
+      System.out.println("Error opening url " + url);
+      return null;
+    }
+    return scanner;
+  }</font><font color="#800000">
+}</font></b></pre></li>
+            <li><b>As Plain Text</b><pre><b><font color="#800000">import java.util.Scanner;
+class MyCode  {
+  public static void main(String[] args) {
+</font></b><font color="#800000"><b>    String url = "<a href="http://kosbie.net/cmu/fall-08/15-100/handouts/parsely.html">http://kosbie.net/cmu/fall-08/15-100/handouts/parsely.html</a>";
+</b></font><b><font color="#800000">    Scanner scanner = <span style="background-color: #FFFF00">getUrlTextScanner(url)</span>;
+    while (scanner.hasNext())
+      System.out.println(scanner.nextLine());
+  }
+</font><font color="#808080" style="font-size: 9pt">
+</font></b><font color="#808080"><span style="font-size: 9pt; font-weight: 700">  // Convenient helper method for reading from a web page (url) as plain text.
+  // Returns null if the page cannot be opened (or for any other error).
+  // On some pages, especially if they contain XML, the spaces may be elided
+  // (sothetextislikethis) -- in that case, try setting the second parameter
+  // to " " or "\n", so spaces or newlines are added after each parsed element.
+  // You are responsible for using this method, but not
+  // for writing it (neither on homeworks or tests)!
+
+  public static Scanner getUrlTextScanner(String url) { return getUrlTextScanner(url, null); }</span></font></pre>
+                <pre><font color="#808080"><span style="font-size: 9pt; font-weight: 700">  public static Scanner getUrlTextScanner(String url, final String dataDelimiter) {
+    Scanner scanner = null;
+    try {
+      final StringBuffer sb = new StringBuffer();
+      java.io.InputStreamReader reader = new java.io.InputStreamReader(
+                                      new java.net.URL(url).openStream());
+      javax.swing.text.html.HTMLEditorKit.ParserCallback parser =
+        new javax.swing.text.html.HTMLEditorKit.ParserCallback() {
+          public void handleText(char[] data, int pos) {
+            if (data != null) {
+              sb.append(data);
+              if (dataDelimiter != null) sb.append(dataDelimiter);
+            }
+          }
+          public void handleSimpleTag(javax.swing.text.html.HTML.Tag tag,
+                            javax.swing.text.MutableAttributeSet a,
+                            int pos) {
+           if (tag.breaksFlow()) sb.append("\n");
+          }
+        };
+      new javax.swing.text.html.parser.ParserDelegator().parse(reader, parser, true);
+      scanner = new Scanner(sb.toString());
+    }
+    catch (Exception e) {
+      System.out.println("Error opening text reader for url: " + url);
+      return null;
+    }
+    return scanner;
+  }</span></font><b><font color="#808080"><span style="font-size: 9pt">
+</span></font><font color="#800000">}</font></b></pre>
+            </li>
+        </ol></li>
+    </ol>
+    </li>
+</ol>
+<hr>
+<p align="center"><font color="#808080" size="2"><b>carpe diem&nbsp;&nbsp; -&nbsp;&nbsp;
+    carpe diem&nbsp;&nbsp; -&nbsp;&nbsp; carpe diem&nbsp;&nbsp; -&nbsp;&nbsp; carpe diem&nbsp;&nbsp;
+    -&nbsp;&nbsp; carpe diem&nbsp;&nbsp; -&nbsp;&nbsp; carpe diem&nbsp;&nbsp; -&nbsp;&nbsp;
+    carpe diem&nbsp;&nbsp; -&nbsp;&nbsp; carpe diem&nbsp;&nbsp; -&nbsp;&nbsp; carpe
+    diem</b></font></p>
+<hr></body>
