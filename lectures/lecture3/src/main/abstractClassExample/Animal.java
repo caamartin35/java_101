@@ -2,15 +2,23 @@ package main.abstractClassExample;
 
 public abstract class Animal {
     int numLegs = 4;
-
-    boolean isRunning = false;
+    State state = State.STILL;
+    enum State{
+        STILL,
+        WALKING,
+        RUNNING
+    }
 
     public void run() {
-        isRunning = true;
+        this.state = State.RUNNING;
     }
 
     public void walk() {
-        isRunning = false;
+        this.state = State.WALKING;
+    }
+
+    public void stopMoving() {
+        this.state = State.STILL;
     }
 
     public abstract void makeSound();
