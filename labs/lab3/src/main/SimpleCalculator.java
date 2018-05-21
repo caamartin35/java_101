@@ -65,28 +65,44 @@ public class SimpleCalculator extends JComponentWithEvents {
     private String errorMsg = null;
 
     public int pow(int base, int expt) {
-        // @TODO #2: This has a bug!  It does not properly handle negative exponents!
-        // Hint: be sure to check the reference implementation supplied to you
-        // to see how this method should work, particularly for negative exponents.
-        return (int)Math.round(Math.pow(base, expt));
+        if (expt < 0) {
+             oops("No negative components!");
+             return 0;
+        }
+        else {
+            // @TODO #2: This has a bug!  It does not properly handle negative exponents!
+            // Hint: be sure to check the reference implementation supplied to you
+            // to see how this method should work, particularly for negative exponents.
+            return (int) Math.pow(base, expt);
+        }
     }
 
     public void testPow() {
         System.out.print("Testing the pow method... ");
         assert(pow(2,3) == 8);
+        assert(pow(4,5) == 256);
+        assert(pow(3,-1) == 0);
         // @TODO #3: Finish this! Be complete yet concise in your testing.
         System.out.println("Passed all tests!");
     }
 
     // integer division...
     public int div(int numerator, int denominator) {
+        if ((numerator <= 0) || (denominator <= 0)) {
+            oops("Only enter one operator!");
+        return 0;
+    }
+        else
         // @TODO #4: This has a bug!  It does not properly handle an obvious case!
-        return numerator / denominator;
+        return Math.round(numerator / denominator);
     }
 
     public void testDiv() {
         System.out.print("Testing the div method... ");
         assert(div(17,5) == 3);
+        assert(div(3,2)==1);
+        assert(div(-1,1)==0);
+
         // @TODO #5: Finish this! Be complete yet concise in your testing.
         System.out.println("Passed all tests!");
     }
@@ -94,11 +110,15 @@ public class SimpleCalculator extends JComponentWithEvents {
     // integer mod (remainder)
     public int mod(int numerator, int denominator) {
         // @TODO #6: this isn't implemented at all -- implement it!
-        return 42;
+        return numerator%denominator ;
     }
 
     public void testMod() {
         System.out.print("Testing the mod method... ");
+        assert(mod(2,3)==2);
+        assert(mod(3,1)==0);
+        assert(mod(5,2)==1);
+        assert(mod(25,7)==4);
         // @TODO #7: Finish this! Be complete yet concise in your testing.
         System.out.println("Passed all tests!");
     }
@@ -178,15 +198,18 @@ public class SimpleCalculator extends JComponentWithEvents {
     // Return true if the given key is one of '0',...,'9', and false otherwise.
     public boolean isDigitKey(char key) {
         // @TODO #9: This has a bug!  it only works for '1' or '2'.  You should
+
         // change the code to work for ALL keys.  Also, your solution here
         // may only use ONE LINE of code and only one boolean
         // logical operator (&&, ||, or !).
-        return ((key == '1') || (key == '2'));
+        return ((key >= '0') && (key <= '9'));
     }
 
     public void testIsDigitKey() {
         System.out.print("Testing the isDigitKey method... ");
         assert(isDigitKey('1') == true);
+        assert(isDigitKey('5') == true);
+        assert(isDigitKey('a')== false);
         // @TODO #10: Finish this! Be complete yet concise in your testing.
         System.out.println("Passed all tests!");
     }
@@ -194,14 +217,20 @@ public class SimpleCalculator extends JComponentWithEvents {
     // Convert the given key to its int equivalent (say, converting '1' to 1),
     // or return -1 if the key is not a decimal digit.
     public int toDigit(char key) {
+        int k = Character.getNumericValue(key);
+        if ((k >=0) && (k<=9))
+            return k;
+        else
+
         // @TODO #11: This has a bug.  It should return -1 if the key is not a
         // legal digit key (that is, not one of '0', ..., '9').
-        return (key - '0');
+        return -1;
     }
 
     public void testToDigit() {
         System.out.print("Testing the toDigit method... ");
         assert(toDigit('1') == 1);
+        assert(toDigit('a') == -1 );
         // @TODO #12: Finish this! Be complete yet concise in your testing.
         System.out.println("Passed all tests!");
     }
@@ -211,7 +240,21 @@ public class SimpleCalculator extends JComponentWithEvents {
         int value = getCurrentValue();
         setCurrentValue(10*value + toDigit(digitKey));
     }
+    public void backSpacePressed() {
+        if (result != null) {
+            return;
+        }
+        else if (rhs!=null) {
+            rhs = null;
+        }
+        else if (op!=null) {
+            op = null;
+        }
+        else if (lhs!=null){
+            lhs=null;
+        }
 
+    }
     // The calculator uses the tilde key ('~') as +/- (that is,
     // as unary negation).
     public boolean isUnaryNegationKey(char key) {
@@ -244,6 +287,15 @@ public class SimpleCalculator extends JComponentWithEvents {
     // However, if it is not a legal time to press a binary operator,
     // the method instead calls oops() with the appropriate error message.
     public void binaryOperatorPressed(char operatorKey) {
+        if (lhs == null)
+            oops("Enter a number before the operator!");
+        else {
+            if (op == null)
+                op = "" + operatorKey;
+            else
+                oops( " Only enter one operator ");
+            }
+    }
         // @TODO #13: This does not properly handle TWO error cases.
         // First, if the user enters '+' before entering a number.
         // (Hint:  your test for this should involve "lhs")
@@ -251,8 +303,6 @@ public class SimpleCalculator extends JComponentWithEvents {
         // (No hint here, except to think about the previous hint and
         // how it might be adapted to this situation.)
         // Run the demo to see the errors in each case.
-        op = "" + operatorKey;
-    }
 
     public boolean isEqualsKey(char key) {
         return (key == '=');
@@ -264,6 +314,11 @@ public class SimpleCalculator extends JComponentWithEvents {
     // it's not legal yet to evaluate the expression, the method instead
     // calls the oops method with the appropriate error message.
     public void equalsPressed() {
+        if (rhs == null)
+            oops ("Nothing to negate!");
+        if(op == null)
+            oops ("Enter a binary expression first!");
+        else
         // @TODO #14: This does not properly handle ONE error case:
         // if the '=' key is pressed before the right-hand side is entered.
         result = evaluateExpression();
@@ -278,11 +333,18 @@ public class SimpleCalculator extends JComponentWithEvents {
         String display;
         if (lhs == null)
             display = "Enter a simple arithmetic expression.";
+
         else {
-            // @TODO #15: this should display properly even when parts of
-            // the expression are still null (not-yet-entered).  As it is,
-            // it does not do that!
-            display = lhs + " " + op + " " + rhs + " = " + result;
+            if ((op == null))
+                display = lhs;
+            else if ((rhs == null))
+                display = lhs + " " + op;
+            else if ((result == null))
+                display = lhs + " " + op + " " + rhs;
+            else
+                // the expression are still null (not-yet-entered).  As it is,
+                // it does not do that!
+                display = lhs + " " + op + " " + rhs + " = " + result;
         }
         return display;
     }
@@ -305,8 +367,15 @@ public class SimpleCalculator extends JComponentWithEvents {
             equalsPressed();
         else if (isDigitKey(key))
             digitPressed(key);
+        else if (isBackSpaceKey(key))
+            backSpacePressed();
         else
             oops("Unknown key: " + key);
+    }
+
+    private boolean isBackSpaceKey(char key) {
+        return (int)(key) == 8;
+
     }
 
     // Note: the drawCenteredString method is not part of Java, but
@@ -332,9 +401,8 @@ public class SimpleCalculator extends JComponentWithEvents {
             drawCenteredString(page, errorMsg, 0, 0, width, 32);
         }
         // @TODO #16: delete the following code!
-        page.setColor(Color.red);
-        drawCenteredString(page,"This buggy version only supports the digits '1' and '2'!",
-                0, height/2, width, 40);
+
+
 
     }
 

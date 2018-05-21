@@ -20,7 +20,13 @@ public class Lab4 {
     // of x * (x-1) * ... * 2 * 1.  Note that 0! equal 1.
     // The method returns -1 for any negative parameter.
     public static int factorial(int x) {
-        return 42;
+        int result=1;
+        for (int i=1;i <=x; i++ ) {
+          result= i*result;
+        }
+        if (x < 0)
+            result = -1;
+        return result;
     }
 
     public static void testFactorial() {
@@ -52,7 +58,27 @@ public class Lab4 {
     //               = gcd(20, 0)  0 is the remainder of 80 / 20
     // So the gcd of 100 and 80 is 20, which is correct.
     public static int gcd(int x, int y) {
-        return 42;
+        int result=-1;
+        int r = 1;
+        if (x>=y) {
+            while (y > 0) {
+                r = x % y;
+                x = y;
+                y = r;
+                result = x;
+            }
+
+        }
+        if  (y > x) {
+            while (x > 0) {
+                r = y % x;
+                y = x;
+                x = r;
+                result = y;
+            }
+        }
+
+        return result;
     }
 
     public static void testGcd() {
@@ -77,7 +103,12 @@ public class Lab4 {
     // of the lcm(x,y) and the gcd(x,y) equal the product x*y,
     // so we can use the gcd method to find the lcm.
     public static int lcm(int x, int y) {
-        return 42;
+        int result = -1;
+        if ((x > 0) && (y>0)) {
+            result = x * y / (gcd(x, y));
+        }
+
+        return result;
     }
 
     public static void testLcm() {
@@ -100,12 +131,24 @@ public class Lab4 {
     // the first index in s where c occurs.  If c does not occur
     // in s (or if s is null), the method returns -1.
     public static int indexOf(String s, char c) {
-        return 42;
+        int result = -1;
+        int n = 0;
+        if (s!=null)
+            n=s.length();
+        if (n>0)  {
+            for (int i=0; i < n; i++) {
+                if (s.charAt(i) == c){
+                    result = i;
+                    i=n;
+                }
+            }
+        }
+        return result;
     }
+
 
     public static void testIndexOf() {
         System.out.print("Testing indexOf... ");
-        assert(indexOf("",'a') == -1);
         assert(indexOf("a",'a') == 0);
         assert(indexOf("abcd",'c') == 2);
         assert(indexOf("abcd",'d') == 3);
@@ -123,7 +166,18 @@ public class Lab4 {
     // the LAST index in s where c occurs.  If c does not occur
     // in s (or if s is null), the method returns -1.
     public static int lastIndexOf(String s, char c) {
-        return 42;
+        int result = -1;
+        int n = 0;
+        if (s!=null)
+            n=s.length();
+        if (n>0)  {
+            for (int i=0; i < n; i++) {
+                if (s.charAt(i) == c){
+                    result = i;
+                }
+            }
+        }
+        return result;
     }
 
     public static void testLastIndexOf() {
@@ -151,11 +205,26 @@ public class Lab4 {
     // Note: instead of using nested "for" loops, you might consider
     // placing the inner "for" loop inside a helper method.
     public static boolean isSubstring(String s1, String s2) {
+        if ((s1 == null) || (s2 == null))
+            return false;
+        else {
+            int n1 = s1.length();
+            int n2 = s2.length();
+            if (n1 < n2)
+                return false;
+            if (n1 >= n2) {
+                int n = n2;
+                for (int i = 0; i <= n1 - n2; i++, n++) {
+                    if (s1.substring(i, n).equals(s2))
+                        return true;
+                }
+            }
         return false;
     }
+    }
+
 
     public static void testIsSubstring() {
-        System.out.print("Testing isSubstring... ");
         assert(isSubstring("abc", "a") == true);
         assert(isSubstring("abc", "abc") == true);
         assert(isSubstring("abc", "abcd") == false);
@@ -185,6 +254,9 @@ public class Lab4 {
 
     public static void testNthHappyNumber() {
         System.out.print("Testing nthHappyNumber... ");
+        assert(nthHappyNumber(1) == 1);
+        assert(nthHappyNumber(2)==7);
+
         assert(false); // You must replace this with your tests!
         System.out.println("Passed all tests!");
     }
