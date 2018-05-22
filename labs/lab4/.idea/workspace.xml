@@ -67,7 +67,7 @@
       <file leaf-file-name="Lab4.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lab4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
+            <state relative-caret-position="2775">
               <caret line="185" column="56" selection-start-line="185" selection-start-column="56" selection-end-line="185" selection-end-column="56" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#li#2;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
@@ -145,7 +145,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="4" />
     <option name="y" value="23" />
     <option name="width" value="1376" />
@@ -212,7 +212,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Lab4">
+  <component name="RunManager" selected="JAR Application.Lab4InvadersDemo.jar">
     <configuration name="Lab4" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.Lab4" />
       <module name="lab4" />
@@ -291,7 +291,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="23" width="1376" height="837" extended-state="1" />
+    <frame x="4" y="23" width="1376" height="837" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -306,12 +306,12 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -611,7 +611,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lab4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
+        <state relative-caret-position="2775">
           <caret line="185" column="56" selection-start-line="185" selection-start-column="56" selection-end-line="185" selection-end-column="56" />
           <folding>
             <element signature="n#style#0;n#span#0;n#li#2;n#ol#0;n#li#0;n#ol#0;n#!!top" expanded="true" />

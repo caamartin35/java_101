@@ -23,7 +23,7 @@
             <span style="background-color: #FFFF00">Bonus/Optional:</span>&nbsp; More
             Snake Extensions</a></b><br>
             In the file Lab6SnakeBonus.java, add the following additional features to
-            the game of Snake that we wrote in class:</p><ol>
+            the game of Snake that is provided:</p><ol>
         <li><b>Simple features<br>
         </b>(do whichever you like -- each is worth 1/2 point up to 3 points max, if
             done really well)<ul>
@@ -52,4 +52,353 @@
         </li>
     </ol>
         <p>Be creative!!!&nbsp; Have fun!!!</p></li>
+</ol>
+<ol>
+    <li><b><a name="Easy"><span style="background-color: #99FF66">Easy</span></a></b><ol>
+        <li><b><a name="Transpose_Musical_Notes">
+            <span style="background-color: #99FF66">Transpose Musical Notes</span></a><br>
+        </b>In order to have an interesting application of arrays, we will use a
+            simple musical note player.&nbsp; First, take a look a musicalNotePlayer/MusicalNotePlay.java.
+            Run it, listen to the results.&nbsp; Now, look inside that file.&nbsp; You will
+            see a method with this signature:<br>
+            <font color="#800000" face="Courier New" size="2">&nbsp; public static void
+                playNotes(int[] notes, int[] times) throws Exception {<br>
+                &nbsp; }</font><br>
+            Here is a simple explanation of how this works, taken from the header
+            comment in the file:<br>
+            <font color="#800000" face="Courier New" size="2">&nbsp; // Simple demo of a
+                simple musical note player.<br>
+                &nbsp; // It takes two arrays -- one containing the notes, the other
+                containing the times for each note.<br>
+                &nbsp; // For the notes, 60 is middle C.&nbsp; 61 is C# (the next note).&nbsp; 62 is D
+                (the note after that).<br>
+                &nbsp; // Legal note range:&nbsp; 1 to 88 (inclusive)<br>
+                &nbsp; // For the times, 64 is a typical quarter note, 256 a typical whole
+                note.<br>
+                &nbsp; // Legal time range:&nbsp; 1 to 256 (inclusive)<br>
+                &nbsp; // If the "times" array is null, it will play all quarter notes.</font><br>
+            You do <i>not</i> need to understand music theory in order to complete
+            this exercise.&nbsp; However, the methods you write here will create arrays
+            of integers which can be used as arguments to the "playNotes" method.&nbsp;
+            So you can <i>hear</i> your results!&nbsp; Fun!<br>
+            <br>
+            Now, in the file Lab6.java, write the method:<br>
+            <font color="#800000" face="Courier New" size="2">&nbsp; public static int[]
+                transposeNotes(int[] notes, int step) {<br>
+                &nbsp; }</font><br>
+            This method makes a song higher-pitched or lower-pitched.&nbsp; This method
+            takes a non-null array of notes (as described above), and another int,
+            the "step", and returns a new array of notes where each note in the
+            resulting "transposed" array equals the corresponding note in the
+            original array plus the (possibly-negative) step.&nbsp; There is this
+            exception, however:&nbsp; in no case shall you transpose so that any notes
+            fall outside of the legal range of [1,88].&nbsp; In such a case, you should
+            reduce the step's magnitude by just enough to keep the transposed result
+            in range.&nbsp; For example, if the highest note in the incoming array is 80,
+            and the step is +10, then you should reduce the step to +8.&nbsp; Similarly,
+            if the lowest note in the incoming array is 8, and the step is -10, you
+            should change the step to be -7.&nbsp; Be sure to include an appropriate test
+            method!&nbsp; Also, for fun, try transposing the sample song in the
+            MusicalNotePlayer, perhaps as such:<br>
+            <font color="#800000" face="Courier New" size="2">&nbsp; for (int step=0;
+                step &lt; 12; step++)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp; playNotes(transpose(songNotes,step), songTimes); // a familiar
+                song, now transposed repeatedly</font><br>
+            You should hear the song played repeatedly, increasing its pitch by a
+            little bit (one-half step) each time it plays.<br>
+            &nbsp;</li>
+        <li><b><a name="Scrabble_Score"><span style="background-color: #99FF66">
+		Scrabble Score</span></a><br>
+        </b>In the game of Scrabble, players receive points for spelling words,
+            where each letter has an associated point value (1 for A, 3 for B, 3 for
+            C, 2 for D, and so on...).&nbsp; For example, ignoring special squares (which
+            we will), the word "CAB" is worth 3+1+3, or 7 points.&nbsp; For more details,
+            here is the Wikipedia page on Scrabble:<br>
+            &nbsp;&nbsp; <a href="http://en.wikipedia.org/wiki/Scrabble">
+                http://en.wikipedia.org/wiki/Scrabble</a><br>
+            <b><br>
+            </b>In the file Lab6.java, write the method:<br>
+            <font color="#800000" face="Courier New" size="2">&nbsp;&nbsp; public static int
+                scrabbleScore(String s, int[] letterValues)</font><b><br>
+            </b>This method takes a String s and an array of 26 integers
+            representing point values of the letters from A to Z in order, and
+            returns the sum of the point values for each letter in the string.&nbsp; If
+            the string is null or empty or if it contains any characters besides
+            uppercase letters, or if the letterValues array is null or not of length
+            26, the result should be -1 to indicate an error.<br>
+            <br>
+            If you are interested, here is an array holding the actual letter values
+            for the English-language version of Scrabble:<br>
+            <font color="#800000" face="Courier New" size="2">&nbsp;&nbsp; private static
+                int[] letterValues = {<br>
+                &nbsp;&nbsp; // A, B, C, D, E, F, G, H, I, J, K, L, M<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3,<br>
+                &nbsp;&nbsp; // N, O, P, Q, R, S, T, U, V, W, X, Y, Z<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1, 1, 3,10, 1, 1, 1, 1, 4, 4, 8, 4,10<br>
+                &nbsp;&nbsp; };</font><br>
+            <br>
+            <b>Note:</b>&nbsp; The letterValues array may contain point values besides
+            the official point values (say, 25 for 'A', 18 for 'B', -33 for 'C', and
+            so on).&nbsp; Your method must work for whatever letterValues array is
+            provided.<br>
+            &nbsp;</li>
+        <li><b><a name="Guessing_Grade_Odds">
+            <span style="background-color: #99FF66">Guessing Grade Odds</span></a><span style="background-color: #99FF66">
+		(Bernoulli Trials + Monte Carlo Methods)</span><br>
+        </b>Say that you are taking a multiple choice test with 10 questions
+            each with 4 choices.&nbsp; If you guess randomly on every question, what
+            are the odds that you score 7/10?&nbsp; According to this page (<a href="http://www.mathwords.com/b/bernoulli_trials.htm">http://www.mathwords.com/b/bernoulli_trials.htm</a>),
+            for example, you can use the Binomial Probability Formula over Bernoulli
+            Trials to compute the answer of 0.0031.&nbsp; Great!&nbsp; But here
+            we'll get that same answer without all that mathiness.<b><br>
+                <br>
+            </b>In the file Lab6.java, write the method:<b><br>
+            </b>
+            <span style="font-size: 10pt; font-family: &quot;Courier New&quot;; color: maroon;">
+	&nbsp;&nbsp; public static double guessingGradeOdds(int targetScore, int
+		questions, int choicesPerQuestion)<br>
+	</span>This method takes a targetScore (number of questions you hope to get
+            correct), the total number of questions, and the number of choices per
+            question, and uses Monte Carlo methods (and <i>not</i> the Binomial
+            Probability Formula, or any other direct means of computation) to
+            compute the odds of getting exactly that many questions correct if
+            guessing on a multiple choice test as described.&nbsp; For example, from
+            the notes above, we expect that:<br>
+            <span style="font-size: 10pt; font-family: &quot;Courier New&quot;; color: maroon;">
+	&nbsp;&nbsp; guessingGradeOdds(7, 10, 4)</span><br>
+            would return a value almostEqual to 0.0031.<br>
+            &nbsp;</li>
+        <li><b><a name="Hermann_Grid_Illusion">
+            <span style="background-color: #99FF66">Hermann Grid Illusion</span></a><br>
+        </b>In the file Lab6HermannGridIllusion.java, write a program that
+            displays the following picture (filling the window as it resizes, of
+            course):<br>
+            <b><img border="0" src="HermannGrid.gif" width="143" height="143"><br>
+            </b>As explained in <a href="http://en.wikipedia.org/wiki/Grid_illusion">the
+                Hermann Grid Illusion Wikipedia page</a>: "The Hermann grid illusion is
+            an optical illusion reported by Ludimar Hermann in 1870.&nbsp; The
+            illusion is characterised by 'ghostlike' grey blobs perceived at the
+            intersections of a white (or light-colored) grid on a black background.
+            The grey blobs disappear when looking directly at an intersection."<b><br>
+                <br>
+            </b>Note:&nbsp; For this problem, it is acceptable to draw the edge
+            rectangles somewhat off-screen, so that all the painted rectangles share
+            the same dimensions.<br>
+            Also note:&nbsp; you do not have to pixel perfect on the margins.&nbsp;
+            Figure about one-half square is visible along each edge.<b><br>
+                &nbsp;</b></li>
+        <li><b><a name="Scrolling_Text_Animation">
+            <span style="background-color: #99FF66">Scrolling Text Animation</span></a><br>
+        </b>In the file Lab6ScrollingTextAnimation.java, write a program that
+            reads the first line from the file "ScrollingText.txt", and displays it
+            in text that scrolls horizontally across the screen.&nbsp; To do this,
+            you should draw each character individually, using drawCenteredString,
+            with the characters initially equally-spaced across the screen.&nbsp;
+            Then, with each timer fired, shift the characters one to the left
+            (without wraparound).&nbsp; When no characters are visible, start the
+            process over again.&nbsp; If the text file does not exist, scroll the
+            message "Could not read ScrollingText.txt", and if the file is there but
+            the first line is blank, scroll the message "Blank first line". <br>
+            <br>
+            This problem is not fully specified.&nbsp; Do not ask for clarifications
+            here!&nbsp; Instead, make good design decisions and go with them!&nbsp;
+            Some modest bonus will be awarded for especially clever or attractive
+            designs.<br>
+            &nbsp;</li>
+        <li><b><a name="Histogram_of_Grades">
+            <span style="background-color: #99FF66">Histogram of Grades</span></a><br>
+        </b>In the file Lab6HistogramOfGrades.java, write a program that reads in
+            an unsorted list of grades from the file "Grades.txt", and displays a
+            histogram of those grades, visually displaying how many students scored
+            A's (90-100), B's (80-89), C's (70-79), D's (60-69), or F's (0-59).&nbsp;
+            You must label the entire histogram and also label the x axis (the
+            grades), but you do not have to label the y axis (# of students) (why is
+            this more difficult to do well?).<br>
+            <br>
+            For example, you might produce a histogram like this:<br>
+            <img border="0" src="HistogramOfGrades.gif" width="280" height="317"><br>
+            <br>
+            This example does more than is required, actually -- you do not need
+            horizontal lines, nor the y-axis labels, nor the tick marks on the x
+            axis.<br>
+            <br>
+            Again:&nbsp; this problem is not fully specified.&nbsp; Do not ask for
+            clarifications here!&nbsp; Instead, make good design decisions and go
+            with them!&nbsp; Some modest bonus will be awarded for especially clever
+            or attractive designs.<br>
+            &nbsp;</li>
+    </ol></li>
+    <li><b><a name="Intermediate"><span style="background-color: #FF99FF">Intermediate</span></a></b><ol>
+        <li><b><span style="background-color: #FF99FF"><a name="Flag_of_Kuwait">
+		Flag of Kuwait</a></span><br>
+        </b>In the file Lab6FlagOfKuwait.java, write a program that paints the
+            flag of Kuwait (so it fills the window when resized):<br>
+            <img border="0" src="flagOfKuwait.gif" width="133" height="69"><br>
+            <br>
+            &nbsp;</li>
+        <li><span style="background-color: #FF99FF"><b><a name="Steelers_Logo">
+		Steelers Logo</a></b></span><b><br>
+        </b>In the file Lab6.java, write the method:<b><br></b>
+            <span style="font-size: 10pt; font-family: &quot;Courier New&quot;; color: maroon;">&nbsp;&nbsp;
+		public static void makeSteelersLogo(int width, int height, String
+		filename)<br></span>This method takes a width, a height, and a filename,
+            and saves a picture of the Steelers logo with those dimensions to that
+            file.&nbsp; In case you did not know it, here is the Steelers logo:<br>
+            <br>
+            <img border="0" src="steelersLogo.gif" width="184" height="184"><br>
+            <br>
+            To do this, you must create a new BufferedImage, then draw the Steelers
+            logo into that image using nothing but drawLine, fillOval,
+            fillRect, drawCenteredString, setFont, setColor.<br>
+            <br>
+            As a first step, you must write this exact helper method:<br>
+            <font color="#800000" face="Courier New" size="2">&nbsp; public static void
+                fillAstroid(Graphics page, Color color, int cx, int cy, int r)</font><br>
+            This method takes a page, a color, a center point (cx,cy), and a radius,
+            and draws a single filled <a href="http://en.wikipedia.org/wiki/Astroid">
+                astroid</a> (the type of hypocycloid in the Steelers logo) in the given
+            color that is just contained by the circle with the given center and
+            radius.&nbsp; Do this as follows:<br>
+            <br>
+            1.&nbsp; Draw "x" and "y" axes centered inside the circle.<br>
+            2.&nbsp; Place n evenly-spaced points along each of the x and y axes.&nbsp; (You
+            do not have to actually draw these points, but you will use them in the
+            next step...)<br>
+            3.&nbsp; In the first quadrant:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Draw a line from (0, n) to (1, 0)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (That is, from the highest point on the y-axis to the first
+            point to the right on the x-axis)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Draw a line from (0, n-1) to (2, 0)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (That is, from the <i>second highest</i> point on the y-axis
+            to the second point to the right on the x-axis)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * And so on (as you move down the y axis, you move right on the x
+            axis).&nbsp; Of course, you must use a loop to draw all these lines!<br>
+            4. Do the same for the other three quadrants.<br>
+            <br>
+            Here is a picture of an astroid drawn in this manner, with about 10
+            points on each positive or negative coordinate axis:<br>
+            <img border="0" src="partialAstroid.gif" width="231" height="230"><br>
+            To a limit, the more points you use, the more filled-in the astroid
+            becomes.&nbsp; Your method must use enough points-per-axis so that the
+            astroid looks to be entirely solid.&nbsp; Curiously, due to roundoff errors,
+            using too many points-per-axis might have the counterintuitive effect of
+            making the astroid appear less filled in!&nbsp; Find a good number by trial
+            and error. <br>
+            <br>
+            Note:&nbsp; while you should be very close, you do not have to be
+            pixel-perfect in this problem.&nbsp; Also, your font does not have to
+            exactly match, but should just be something reasonable.<br>
+            &nbsp;</li>
+    </ol></li>
+    <li><b><a name="Hard"><span style="background-color: #00FFFF">Hard</span></a></b><ol>
+        <li><b><a name="Flag_of_the_European_Union">
+            <span style="background-color: #00FFFF">Flag of the European Union</span></a><span style="background-color: #00FFFF">
+		(With Stars and Circular Placement)<br>
+		</span></b>In the file Lab6FlagOfTheEU.java, write a program that paints the
+            flag of the European Union (so it fills the window when resized):<br>
+            <img border="0" src="flagOfTheEuropeanUnion.gif" width="94" height="54"><br>
+            You should draw the stars correctly, of course!<br>
+            &nbsp;</li>
+        <li><b><span style="background-color: #00FFFF">
+		<a name="Connect4_or_Othello">Connect4 or Othello</a></span></b><br>For
+            this problem, you may write <i>either</i> Connect4 <i>or</i> Othello
+            (and you may <i>not</i> write the other one for bonus; instead, try one
+            of the bonus problems in the Challenge section!).&nbsp; Your choice, but
+            if you choose Othello, which is a bit harder, you will receive +5 bonus
+            points.<br>
+            <br>
+            <b>Connect4 Option:<br>
+            </b>In a file named Lab6Connect4.java, write the game of Connect4 provided in connect4.jar<br>
+            To play the game:&nbsp; Two players alternate turns dropping pieces (using
+            the left, right, and down or space keys) in columns.&nbsp; First player to
+            get 4-in-a-row wins that game.&nbsp; If the board fills up, that game is a
+            tie.&nbsp; Play the game a bit to understand the rest of the design spec.&nbsp;
+            The game IS the design spec, so your games should match its behavior
+            (though you do not have to be "pixel perfect" -- just "very close").&nbsp;
+            For more details, here is the Wikipedia page on Connect4:<b><br>
+            </b>&nbsp;&nbsp; <a href="http://en.wikipedia.org/wiki/Connect_Four">
+                http://en.wikipedia.org/wiki/Connect_Four</a><br>
+            <br>
+            <b>Othello/Reversi Option:<br>
+            </b>In a file named Lab6Othello.java, write a two-player game of Othello
+            (also known as Reversi).&nbsp; If you do not know how to play this game, the
+            rules are simple and it is quick to learn (though hard to master).&nbsp; You
+            can learn about the game at the Wikipedia page:<br>
+            &nbsp;&nbsp; <a href="http://en.wikipedia.org/wiki/Reversi">
+                http://en.wikipedia.org/wiki/Reversi</a><br>
+            You can also play the game against a computer by searching for "Othello
+            Applet" in the search engine of your choice.&nbsp; (Of course, it is also
+            possible to find some Java source code for Othello by a similar search,
+            but that is most definitely not allowed!&nbsp; Write the code yourself, and
+            do not look at anyone else's implementation!!!)<br>
+            <br>
+            Your program will not play against a person.&nbsp; Instead, it will support
+            two people playing each other, in the same manner as the sample Connect4
+            game in the previous section.&nbsp; Your program should not allow illegal
+            moves, however.&nbsp; It should also automatically pass if a player has no
+            legal moves, and automatically end the game when neither player has a
+            legal move.&nbsp; Keep score and provide a generally pleasing and easy-to-use
+            UI (again, check the Connect4 sample program to gauge what we mean,
+            though you have the freedom to design this however you want).&nbsp; Have fun
+            with it! <br>
+            &nbsp;</li>
+        <li><span style="background-color: #00FFFF"><b>
+		<a name="Motion_Aftereffect">Motion Aftereffect</a></b></span><b><span style="background-color: #00FFFF">
+		(Animated Optical Illusion)</span><span style="background-color: #FFFF00"><br>
+		</span></b>In a file named Lab6MotionAftereffect.java, write a program
+            that reproduces the Motion Aftereffect illusion shown and described
+            here:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.michaelbach.de/ot/mot_adapt/index.html">
+                http://www.michaelbach.de/ot/mot_adapt/index.html</a><br>
+            <b>Note</b>:&nbsp; for 3/4-credit on this problem, you can skip the
+            animation and instead just draw the non-animated picture shown below.<br>
+            <br>
+            In any case, your reproduction does not need to be perfect, but should
+            be reasonably close (hopefully enough to generate the optical illusion).&nbsp;
+            For example, here is a snapshot of our reasonable-enough solution:<br>
+            <br>
+            <img border="0" src="Lab6MotionAftereffectScreenShot.GIF" width="304" height="317"><br>
+            <br>
+            You also do not need to include any of the buttons or otherwise let the user
+            adjust anything -- just use values close to the default values.&nbsp;
+            You should, however, include the Buddha picture (or some other suitable picture),
+            though, since that is important to see the illusion that the picture is
+            expanding/contracting (it's not)).<br>
+            <br>
+            <b>Hint</b>:&nbsp; use fillArc extensively!&nbsp; Our solution called
+            fillArc well over 200 times to draw the picture above -- once for each
+            individual segment.&nbsp; Now, we didn't draw segments, but arcs, so we
+            had to draw the arcs in a specific order so they hid portions of
+            previous arcs, leaving behind the segments you see now.<br>
+            <br>
+            &nbsp;</li>
+    </ol></li>
+    <li><b><a name="Very Hard"><span style="background-color: #FFFF00">Very Hard</span></a></b><ol>
+        <li><b><span style="background-color: #FFFF00">
+		<a name="Word_Search_Generator">Word Search Generator</a></span></b><br>In the file Lab6BonusWordSearchGenerator.java, write the method:<b><br>
+        </b>
+            <span style="font-size: 10pt; font-family: &quot;Courier New&quot;; color: maroon;">&nbsp;&nbsp;
+		public static char[][] makeWordSearch(String[] words, int
+		timeLimitInMilliseconds)<br></span>This method takes an array of
+            Strings, the word list, and a time limit in milliseconds, and creates
+            and returns a new word search board (as a 2d array of chars) that
+            contains all the given words such that:<br>&nbsp;<ul>
+                <li>The position of each word is chosen randomly;<br>&nbsp;</li>
+                <li>The direction of each word is chosen randomly.<br>&nbsp;</li>
+                <li>The dimensions of the board are as small as you can get them;<br>&nbsp;</li>
+                <li>Your method runs within the given time limit.<br>The time limit is on the grader's machine, not yours, so do not make
+                    assumptions as to how fast the machine is.&nbsp;&nbsp; Instead, you
+                    should call System.currentTimeMillis() at the start of your method,
+                    and then again occasionally as your method runs.&nbsp; The
+                    difference between the return values of the initial call and
+                    subsequent calls is how long your method has been running, in
+                    milliseconds.&nbsp; Note that this method returns a long, but the
+                    difference can safely be stored in an int.</li>
+            </ul>
+            <p>This is a contest.&nbsp; The smaller your board (rows*cols), the
+                better your solution.&nbsp; Strong solutions will receive extra bonus,
+                and the overall best solution will receive considerably more bonus.&nbsp;
+                This is a chance to really shine!!!&nbsp; How low can you go?!?<br>&nbsp;</p></li>
+    </ol></li>
 </ol>
