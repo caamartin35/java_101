@@ -1,0 +1,177 @@
+<ol>
+    <li><b><a name="Easy"><span style="background-color: #99FF66">Easy</span></a></b><ol>
+        <li><span style="background-color: #99FF66"><b><a name="addLineNumbers">
+		addLineNumbers</a></b></span><br>
+            Write the following method:<br>
+            <b><font color="#800000" face="Courier New" size="2">&nbsp;&nbsp; public
+                static boolean addLineNumbers(String srcFilename, String destFilename)</font></b><br>
+            <i>[ This method is inspired by an actual need I had this semester:&nbsp;
+                to write quiz5, I needed to add line numbers to Snake.java, and I did so
+                by writing a program just like the one assigned here!&nbsp; --DK ]</i><br>
+            This method takes two filenames, a srcFilename and a destFilename.&nbsp;
+            The method copies the source file into the destination file while adding
+            line numbers to each line (with the first line numbered as 1, not 0),
+            and returns true if the operation succeeded and false otherwise (if it
+            cannot find the source file or cannot open the destination file for
+            writing).&nbsp; To be precise:&nbsp; each destination line should begin
+            with a line number, followed by a colon, a single space, and then the
+            corresponding source line.&nbsp; The only complication is that all the
+            colons must be vertically aligned -- that is, all the line numbers must
+            have leading spaces as required so that the line numbers are
+            right-aligned.&nbsp; Also, the largest line numbers must have no leading
+            spaces before them.&nbsp; Thus, before you can print anything to the
+            destination file, you first need to know the total number of lines in
+            the source file (why?).&nbsp; For this, you may consider reading the
+            source file twice -- once to determine the number of lines and a second
+            time to actually generate the destination file.&nbsp; Alternatively, you
+            could read the source file lines into an array or ArrayList of strings,
+            but that's much less efficient (for example, what might go wrong with
+            this approach for a file with, say, 100 million lines?).<br>&nbsp;</li>
+    </ol></li>
+    <li><b><a name="Intermediate"><span style="background-color: #FF99FF">Intermediate</span></a></b><ol>
+        <li><span style="background-color: #FF99FF"><b>
+		<a name="Graphing_Run_Times">Graphing Run Times</a></b></span><br>
+            Using the timing code from the class notes, neatly draw (by hand) graphs
+            of the run times for selection sort and merge sort.&nbsp; The x axis of
+            each graph should represent N, the number of elements in the random
+            arrays.&nbsp; The y axis should represent T, the amount of time required
+            for that algorithm to sort random arrays with N elements.&nbsp; You may
+            need to run the algorithm several times and average the results to get
+            reliable data, especially for smaller N.&nbsp; The graphs should include
+            large enough values of N so that they clearly demonstrate the quadratic
+            nature of selection sort (that is, you should see a parabola emerging),
+            and the sub-quadratic nature of merge sort (that is, you should see that
+            it is "flatter" than any parabola).<br>
+            <br>
+            Do not submit your graphs on Thursday night with the emailed submission
+            of the rest of the assignment!&nbsp; Instead, hand in the physical
+            copies of your graphs on Friday in recitation.&nbsp; Everything else is
+            due Thursday night via email, as usual.<br>
+            <br>
+            Also: this should not be a very time-consuming task.&nbsp; If you're
+            spending more than 10 minutes on it, you're on the wrong track!<br>
+            &nbsp;</li>
+        <li><b><span style="background-color: #FF99FF">
+		<a name="The_ListOfStrings_Class">The ListOfStrings Class (Custom
+		ArrayList)</a></span></b><br>
+            Start with Lab9ListOfStrings.java<br>
+            Do not modify the Lab9ListOfStrings main class. Make this code work by
+            adding the appropriate classes with the appropriate methods as described
+            by the test methods called by this main method. Note that you do not
+            have to add any code to the test cases, though you do have to solve them
+            with general-purpose solutions (and not just hard-code the example test
+            cases!).<b><br>
+                <br>
+            </b>Discussion:&nbsp; The ListOfStrings class is a simple version of the
+            ArrayList class (at least ArrayList&lt;String&gt;).&nbsp; It shows how you can
+            make arrays "grow automatically", and much more efficiently, by
+            allocating larger arrays than you need and then only using part of the
+            allocated array.&nbsp; For example, the strings "Let's", "Go", and
+            "Pens" might be stored in the following array:<br>
+            &nbsp;&nbsp; { "Let's", "Go", "Pens", null }<br>
+            The array is of length 4, but only the first 3 elements are actually
+            used to store the strings.&nbsp; If we were to add another string to
+            this list, we would not have to increase the size of the array -- we
+            could just store it in that last unused location (in place of the null
+            reference).&nbsp; This is the same general technique that ArrayList
+            uses!<br>
+            <br>
+            To accomplish this, our ListOfStrings not only has an array that stores
+            the strings, but also a "size" instance variable that keeps track of how
+            much of the array is currently in use.&nbsp; To be safe, and also to let
+            the garbage collector do its thing, we'll be sure to set all the unused
+            elements in the array to null.&nbsp; Also, for clarity, we will store
+            all the unused elements in the array at the top (larger indexes) of the
+            array.&nbsp; And for further clarity, we will use the terms "size" for
+            the number of used elements and "capacity" for the total number of used
+            and unused elements, and we will avoid the term "length" entirely.<br>
+            <b><br>
+            </b>When we add a string to a "full" array (with no unused/null
+            elements, so its "size" equals its "capacity"), then we must finally
+            allocate a new, larger array.&nbsp; However, instead of making the array
+            just one element larger, we will <i>double</i> the array's capacity.&nbsp;
+            In this way, we minimize the amount of allocating while still not
+            excessively over-allocating.&nbsp; So we'll double the capacity of the
+            array, and copy all the strings from the first array into the same
+            locations of the new array, and then finally add the new string (knowing
+            that now there is room for it).<b><br>
+                &nbsp;</b></li>
+    </ol></li>
+    <li><b><a name="Hard"><span style="background-color: #00FFFF">Hard</span></a></b><ol>
+        <li><span style="background-color: #00FFFF"><b>
+		<a name="The_SortableArrays_Class">The SortableArrays Class</a><br></b>
+		</span>Start with Lab9SortableArrays.java<br>Do not
+            modify the Lab9SortableArrays main class. Make this code work by adding
+            the appropriate classes with the appropriate methods as described by the
+            test methods called by this main method. Note that you do not have to
+            add any code to the test cases, though you do have to solve them with
+            general-purpose solutions (and not just hard-code the example test
+            cases!).<br>
+            <br>
+            Be sure to study the examples in the course notes on
+            <a href="http://kosbie.net/cmu/fall-09/15-110/handouts/notes-more-writing-classes.html#Sortable_Objects_(Comparable_+_compareTo)">
+                Sortable Objects</a> and also look at the
+            <a href="http://kosbie.net/cmu/fall-09/15-110/handouts/notes-more-writing-classes.html#Examples">
+                Examples</a>.&nbsp; Also, read the comments in the test code carefully
+            to understand how the SortableArray instances should be compared to each
+            other.<br>&nbsp;</li>
+    </ol></li>
+    <li><b><span style="background-color: #FFFF00"><a name="Very Hard">Very Hard</a></span></b><ol>
+        <li><a name="Automated_Run_Time_Graphing">
+            <span style="background-color: #FFFF00"><b>Automated</b></span><span style="background-color: #FFFF00"><b>
+		Run Time Graphing</b></span></a><b><br>
+        </b>In the file Lab9BonusRunTimeGraphing.java:&nbsp; First, automate the
+            process of graphing run times so that all the data is gathered
+            automatically.&nbsp; Second, place the data into an array.&nbsp; Third,
+            plot this array graphically (just draw lines between each successive
+            pair of points).&nbsp; Place plots of competing algorithms (clearly
+            labeled and in different colors) on the same graph, to clearly show the
+            difference between them.<br>
+            &nbsp;</li>
+        <li><b><span style="background-color: #FFFF00">
+		<a name="Quadratic_Regression">Quadratic Regression</a> (Even Better Run
+		Time Graphing)</span><br>
+        </b>In the file Lab9BonusQuadraticRegression.java:&nbsp; Expanding on the
+            previous problem, use whatever resources you can to learn about <i>
+                quadratic regression</i>, where you find the <i>best-fitting parabola</i>
+            for a given data set.&nbsp; Plot the best-fitting parabola for each
+            curve in your "improved run time graphing" program from the previous
+            problem.&nbsp; This alone should visually demonstrate that, say,
+            selection sort is indeed quadratic and merge sort is sub-quadratic.&nbsp;
+            Finally, for each graph, compute and display some measure of confidence
+            or goodness of fit, which should further confirm our conclusions.<br>
+            &nbsp;</li>
+        <li><b><span style="background-color: #FFFF00"><a name="Shell_Sort">
+		Shell Sort</a></span></b><br>
+            In the file Lab9BonusShellSort.java:&nbsp; Carefully read
+            <a href="http://en.wikipedia.org/wiki/Shell_sort">the Wikipedia page on
+                Shell Sort</a>.&nbsp; Then, implement shell sort (you may refer to the
+            pseudocode at the end of that page, but do not refer to any actual Java
+            implementations, which are readily available, of course!).&nbsp;
+            Finally, adapt the timing code from the class notes to demonstrate that
+            Shell Sort is indeed faster than the quadratic sorts but, as the data
+            size increases, eventually loses out to the O(nlogn) sorts (eg,
+            mergesort and/or quicksort).&nbsp; If you did either part of the
+            previous bonus on improving/automating the run time graphing, include
+            shell sort is your automated analysis.<br>
+            &nbsp;</li>
+        <li><span style="font-weight: 700; background-color: #FFFF00">
+		<a name="Polynomial_Time_Approximate_Subset_Sum">Polynomial Time
+		Approximate Subset Sum</a></span><br>To complete this bonus problem, you
+            must first have completed the previously-assigned "Subset Sum" bonus
+            problem (which you may complete now, for some small bonus credit, if you
+            have not already done so).&nbsp; Next, read
+            <a href="http://en.wikipedia.org/wiki/Subset_sum_problem">the
+                Wikipedia page on Subset Sum</a>, particularly the last section on a "<a href="http://en.wikipedia.org/wiki/Subset_sum_problem#Polynomial_time_approximate_algorithm">Polynomial
+                Time Approximate Algorithm</a>".&nbsp; Then, in the file Lab9BonusApproximateSubsetSum.java,
+            implement an approximate solution to the subset sum problem.&nbsp;
+            Perform some analysis on your solution to demonstrate that it basically
+            works as expected.<br><br>Brief discussion:&nbsp; As previously noted,
+            the Subset Sum problem is NP-complete, which means (in part) that there
+            is no known polynomial-time (that is, "fast") algorithm for solving the
+            problem exactly.&nbsp; Thus, for even modestly large arrays, finding the
+            exact solution may require vast amounts of time&nbsp; However, as this
+            problem demonstrates, approximate solutions of NP-complete problems
+            often may be found in much less time.</li>
+    </ol></li>
+</ol>

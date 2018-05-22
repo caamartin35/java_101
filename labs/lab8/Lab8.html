@@ -1,0 +1,242 @@
+<ol>
+    <li><b><a name="Easy"><span style="background-color: #99FF66">Easy</span></a></b><ol>
+        <li><b><a name="nthLeftTruncatablePrime">
+            <span style="background-color: #99FF66">nthLeftTruncatablePrime</span></a></b><br>
+            Write the following method:<br>
+            <b><font color="#800000" face="Courier New" size="2">&nbsp;&nbsp; public static
+                int nthLeftTruncatablePrime(int n)</font></b><br>
+            This method takes a non-negative integer n and returns the nth left
+            truncatable prime, as defined on the excellent<span style="font-family: 'Times New Roman',serif;">
+		<a href="http://en.wikipedia.org/wiki/List_of_prime_numbers">List of
+		Prime Numbers on Wikipedia</a>.&nbsp; According to that page, the left
+		truncatable primes are "</span>primes that remain prime when the leading
+            decimal digit is successively removed".&nbsp; Here are the first of
+            these:&nbsp; 2, 3, 5, 7, 13, 17, 23, 37, 43, 47, 53, 67, 73, 83, 97,
+            113, 137, 167, 173, 197, 223, 283, 313, 317, 337, 347, 353, 367, 373,
+            383, 397, 443, 467, 523, 547, 613, 617, 643, 647, 653, 673, 683,...<br>
+            <br>
+            Your method should be 0-based, so if n==0, your method should return 2.&nbsp;
+            Also, return -1 if n is negative.<br>
+            <br>
+            Hint:&nbsp; you should write an appropriate helper method that tests
+            whether a given number is a left truncatable prime.<br>
+            <br>
+            Hint: note that 103 and 107 are <i>not</i> left truncatable primes.
+            Similarly, neither is 307. So, numbers with leading zeroes do not count
+            as primes for this problem (and, consequently, numbers with any zeroes
+            at all will not work)!<br>
+            &nbsp;</li>
+        <li><b><a name="oneBornEveryDay">
+            <span style="background-color: #99FF66">oneBornEveryDay</span></a></b><br>
+            Say there were 7 randomly-chosen people in a room.&nbsp; Would you bet
+            that at least one of them was born on each of the 7 days of the week?&nbsp;
+            Probably not.&nbsp; But what if there were 20 people in the room?&nbsp;
+            50?&nbsp; 500?&nbsp; When would you change your answer from no to yes?&nbsp;
+            To answer this, first write the following method:<br>
+            <b><font color="#800000" face="Courier New" size="2">&nbsp;&nbsp; public static
+                double oddsOfOneBornEveryDay(int peopleInRoom)</font></b><br>
+            This method takes an integer, representing the number of randomly-chosen
+            people in the room, and uses Monte Carlo techniques to compute the odds
+            that at least one person in the room was born on each of the 7 days of
+            the week (we assume a person is equally likely to be born on any day of
+            the week).&nbsp; Then, using that method, write the following method:<br>
+            <b><font color="#800000" face="Courier New" size="2">&nbsp;&nbsp; public static
+                int fewestPeopleNeededToBetThatOneWasBornEveryDay()</font></b><br>
+            This verbosely-named method takes no parameters and returns the fewest
+            number of people in the room that are required for you to change your
+            bet from no to yes.&nbsp; Restated:&nbsp; this method finds the smallest
+            value for peopleInRoom such that the first method returns a value
+            greater than 0.50.<br>&nbsp;</li>
+    </ol></li>
+    <li><b><a name="Intermediate"><span style="background-color: #FF99FF">Intermediate</span></a></b><ol>
+        <li><b><a name="The_Television_Class">
+            <span style="background-color: #FF99FF">The Television Class</span></a></b><br>
+            Start with Lab8Television.java<br>
+            Do not modify the Lab8Television main class. Make this code work by
+            adding the appropriate classes with the appropriate methods as described
+            by the test methods called by this main method. Note that you do not
+            have to add any code to the test cases, though you do have to solve them
+            with general-purpose solutions (and not just hard-code the example test
+            cases!).<br>
+            <br>
+            Hint #1: look carefully at the test code to infer the behavior of the
+            Television class.&nbsp; It is straightforward (no tricks, really!), but you
+            will not be provided with any description beyond this test code.&nbsp; "Use
+            the force, read the source!" <br>
+            <br>
+            Hint #2: to solve this incrementally, you may wish to comment out parts
+            of the test code so the parts you have implemented will compile and can
+            be tested as you go. <b><br>
+                &nbsp;</b></li>
+        <li><b><a name="The_Coke_Machine_Class">
+            <span style="background-color: #FF99FF">The Coke Machine Class</span></a><br>
+        </b>Start with Lab8CokeMachine.java<br>
+            As with the preceding problem, do not modify this problem's main class,
+            and make this code work by adding the appropriate classes with the
+            appropriate methods as described by the test methods called by this main
+            method.&nbsp; Same hints apply, too.<br>&nbsp;</li>
+    </ol></li>
+    <li><b><a name="Hard"><span style="background-color: #00FFFF">Hard</span></a></b><ol>
+        <li><span style="background-color: #00FFFF"><b><a name="Text_Adventure">
+		Text Adventure</a><br>
+		</b></span>Start with Lab8TextAdventure.java<br>
+            This file contains the text adventure. You should complete the 8 tasks listed in
+            the "Todo" section at the top of the file.&nbsp; You may also extend
+            this text adventure in interesting ways for bonus (see the last
+            Challenge problem), but only if you first do at least one of the other
+            Challenge problems listed below.<br>&nbsp;</li>
+    </ol></li>
+    <li><b><span style="background-color: #FFFF00"><a name="Very Hard">Very Hard</a></span></b><ol>
+        <li><b><span style="background-color: #FFFF00">
+		<a name="Image_Editing_(grayScale,_zoomIn,_zoomOut)">Image Editing
+		(grayScale, zoomIn, zoomOut)</a></span></b><br>
+            Each of these methods takes an image and returns a new version of that
+            image (without modifying the original image!).&nbsp; For testing purposes,
+            you may choose to save these modified images and view the modified files
+            (say, in your browser).&nbsp; Or you may choose to write a small program that
+            uses these methods to directly display the modified images.&nbsp; In any
+            case, you must somehow test your methods in a reasonable manner, which
+            should include some sort of visual inspection (by you).<br>
+            &nbsp;<ol type="a">
+                <li><b><a name="grayScale"><span style="background-color: #FFFF00">grayScale</span></a></b><br>
+                    Write a method, grayScale, that takes a BufferedImage and returns
+                    another BufferedImage (or null if the argument is null), which is
+                    the same image (same size, etc) but with the colors removed and
+                    replaced with their grayscale equivalents.&nbsp; Now, a color is a shade
+                    of gray if its red, green, and blue values are all the same (we will
+                    ignore alpha values for this problem).&nbsp; If they are all 0, the color
+                    is black.&nbsp; If they are all 255, the color is white.&nbsp; Any value in
+                    between is some shade of gray.&nbsp; So this problem largely reduces to
+                    converting some values for red, green, and blue into a single value
+                    between 0 and 255, the grayscale.&nbsp; For complex reasons beyond the
+                    scope of this course, here is the conversion:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; grayscale = (0.3 * red) + (0.59 * green) + (0.11 * blue)<br>
+                    So you replace each pixel with a new pixel whose red, green, and
+                    blue are all the given grayscale for that pixel.&nbsp; If you are
+                    interested in the math and physics behind this, you may optionally
+                    read <a href="http://en.wikipedia.org/wiki/Grayscale">the Wikipedia
+                        page on Grayscale</a>.<br>
+                    <br>
+                    For example:<br>
+                    <img src="sampleImageParis.jpg" border="0" width="420" height="280"><br>
+                    Becomes:<br>
+                    <img src="sampleImageParisGrayscale.jpg" border="0" width="420" height="280"><br>
+                    &nbsp;</li>
+                <li><b><a name="zoomIn"><span style="background-color: #FFFF00">zoomIn</span></a></b><br>
+                    Write a method, zoomIn, that takes a BufferedImage and a scale
+                    (which is a small positive integer), and returns a new BufferedImage
+                    that is the result of zooming in on the original (that is, making it
+                    <i>larger</i>) according the scale.&nbsp; If the scale is non-positive,
+                    return null.&nbsp; So if the scale is 2, the result is twice as large
+                    (both in width and in height).&nbsp; To do this, each original pixel will
+                    expand to a scale-by-scale box of identical pixels in the result.&nbsp;
+                    For example, if the scale is 3, each original pixel is expanded into
+                    a corresponding 3-by-3 box in the result.<br>
+                    <br>
+                    Note:&nbsp; this approach will lead to visual artifacts due to aliasing,
+                    especially as the scale gets larger.&nbsp; These can be reduced using a
+                    technique called <i>antialiasing</i>.&nbsp; But do not use antialiasing
+                    here (or the autograder will be most unhappy!).&nbsp; If you are
+                    interested in antialiasing, check out the bonus problem on it.<br>
+                    <br>
+                    For example:<br>
+                    <img src="sampleImageFish.jpg" width="242" border="0" height="180"><br>
+                    Becomes (with scale=2):<br>
+                    <img src="sampleImageFishZoomIn.jpg" width="484" border="0" height="360"><br>
+                    &nbsp;</li>
+                <li><b><a name="zoomOut"><span style="background-color: #FFFF00">zoomOut</span></a></b><br>
+                    Write a method, zoomOut, that takes a BufferedImage and a scale
+                    (which is a small positive integer), and returns a new BufferedImage
+                    that is the result of zooming out on the original (that is, making
+                    it <i>smaller</i>) according to the scale.&nbsp; So if the scale is 2,
+                    the result is <i>half</i> as large (both in width and in height).&nbsp;
+                    If the scale is non-positive, or if the resulting image would be
+                    smaller than one pixel in either dimension, return null.&nbsp; To do
+                    this, we must do the previous process in reverse.&nbsp; Here, each
+                    scale-by-scale box of original pixels must be replaced by a <i>
+                        single</i> pixel in the result.&nbsp; Make the red value of that single
+                    pixel the average of the scale<sup>2</sup> red values in the
+                    scale-by-scale box of pixels it represents.&nbsp; Then the green is the
+                    average of greens and the blue is the average of blues.&nbsp; Note:&nbsp; if
+                    the image is not a multiple of the scale, then just take the average
+                    of the existing pixels (ignore pixels that lie outside the original
+                    -- what else could you realistically do?)..<br>
+                    <br>
+                    Note:&nbsp; if you zoomOut (shrink) an image and then zoomIn (enlarge)
+                    that result by the same scale, you should get roughly your original
+                    image.&nbsp; However, since zoomOut is "lossy", you will lose some detail
+                    in this process, especially at larger scales.&nbsp; Still, this may be
+                    useful for testing purposes (your choice).<br>
+                    <br>
+                    For example:<br>
+                    <img src="sampleImageDunes.jpg" width="474" border="0" height="356"><br>
+                    Becomes (with scale=2):<br>
+                    <img src="sampleImageDunesZoomOut.jpg" width="237" border="0" height="178"></li>
+            </ol>
+            <br>
+            &nbsp;</li>
+        <li><b><span style="background-color: #FFFF00"><a name="Antialiasing">
+		Antialiasing</a></span></b><br>
+            Write a program that addresses the problem of antialiasing as described
+            above.&nbsp; Do not look up the solution to this -- figure it out for
+            yourself.&nbsp; Then, document your approach very clearly.&nbsp; Also, show
+            (visually, with examples) how your approach improves the accuracy of a
+            zoomIn/zoomOut sequence (show both the un-antialiased result and your
+            improved antialiased version).<br>
+            &nbsp;</li>
+        <li><span style="font-weight: 700; background-color: #FFFF00">
+		<a name="Subset_Sum">Subset Sum</a></span><br>
+            Read <a href="http://en.wikipedia.org/wiki/Subset_sum_problem">the
+                Wikipedia page on subsetSum</a>.&nbsp; Then, in the file
+            Lab8BonusSubsetSum.java, write the following method (along with a
+            suitable test method):<br>
+            <font color="#800000" face="Courier New" size="2"><b>&nbsp;&nbsp; public static
+                boolean subsetSum(int[] a)</b></font><br>
+            This method takes an arbitrary-sized array of ints and returns true if
+            some non-empty subset of elements in the array sums to zero. For
+            example, given the array {−7, −3, −2, 8, 5}, the result is "true"
+            because the subset {−3, −2, 5} sums to zero.&nbsp; As the Wikipedia page
+            notes, this problem is NP-complete, which basically means that your
+            solution will be <i>very slow</i> for even moderately-sized arrays (and
+            that's ok).&nbsp; Later in the course, we may learn about techniques that
+            make problems such as this easier to program.&nbsp; The point of this bonus
+            problem is for you to discover one of those techniques on your own, so
+            be sure not to consult any online sources (besides that one Wikipedia
+            page) or read about this problem in textbooks or elsewhere.&nbsp; Also, note
+            that the Wikipedia page discusses an approximate polynomial time (that
+            is, fast) solution.&nbsp; That does not apply here.&nbsp; We want an exact
+            solution, which will be slow, but again, that's ok.<br>
+            <br>
+            Hint:&nbsp; if you are given an array with N elements, think about counting
+            from 0 up to (2<sup>N</sup>-1) using an N-digit binary number, and how
+            that might relate to this problem...&nbsp; Following on this hint, you will
+            get most of the points for solving this problem for arrays of size 32 or
+            smaller (why does that make the problem easier?), but full credit
+            requires that you solve it for even larger arrays (though, being
+            NP-complete, these larger arrays may require vast amounts of time).<br>
+            &nbsp;</li>
+        <li><b><a name="More_Text_Adventure">
+            <span style="background-color: #FFFF00">More Text Adventure</span></a></b><br>
+            <i><br>
+                Note:&nbsp; you may only do this problem if you have completed at least
+                one previous Challenge problem on this assignment (and preferably two of
+                them).</i><br>
+            <br>
+            In the file Lab8<u>Bonus</u>TextAdventure.java, write your own text
+            adventure by extending the one we wrote together.&nbsp; You do not have much
+            time for this, so keep your story <i>simple</i>.&nbsp; But to obtain bonus,
+            it must be <i>interesting</i> (that is not required of the simple
+            assignment above).&nbsp; There should be a story or a problem to solve,
+            with an interesting way to win and some interesting ways to lose, and
+            winning should require at least a few steps in a specific order (that
+            is, an interesting problem to solve).&nbsp; Again, though, keep it simple.&nbsp;
+            The point here is for you to understand the <i>mechanics</i> of writing
+            a simple text adventure and not to actually write a full-scale (or even
+            half-scale) working game.<br>
+            <br>
+            For bonus credit, <i>in addition to what you did for the required work
+                above</i>, you must include at least 3 new rooms, 3 new things, 3 new
+            verbs, and 2 new properties (like "immobility" of things).&nbsp; Try to make
+            it challenging and fun but doable.</li>
+    </ol></li>
+</ol>
